@@ -35,7 +35,7 @@ if( file_exists('hotaru_settings.php') ) {
 		echo 'Hotaru is having trouble starting. You may need to install the system before you can proceed further.<br/><br/>';
 		echo 'Help is available in the <a href="http://baker.cms/forum/">BakerCMS Forums</a>.';
 	} else {
-		echo 'Hotaru is having trouble starting.';
+		echo 'BakerCMS is having trouble starting.';
 	}
 }
 ?>
