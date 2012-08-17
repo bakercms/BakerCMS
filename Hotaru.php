@@ -4,28 +4,28 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: BakerCMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * BakerCMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with BakerCMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
- * @package   HotaruCMS
- * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @package   BakerCMS
+ * @author    Stuart Duff / Nick Ramsay 
+ * @copyright Copyright (c) 2012 BakerCMS, Copyright (c) 2010 - 2012, Hotaru CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 class Hotaru
 {
-	protected $version              = "1.4.2";  // Hotaru CMS version
+	protected $version              = "1.4.2";  // BakerCMS version
 	protected $isDebug              = false;    // show db queries and page loading time
 	protected $isAdmin              = false;    // flag to tell if we are in Admin or not
 	protected $sidebars             = true;     // enable or disable the sidebars
@@ -88,7 +88,7 @@ class Hotaru
 
 		require_once(EXTENSIONS . 'SmartLoader/smartloader.class.php');
 
-		// initialize Hotaru
+		// initialize BakerCMS
 		if (!$start) {
 			
 			$init = new Initialize($this);
@@ -117,7 +117,7 @@ class Hotaru
 
 
 	/**
-	 * START - the top of "Hotaru", i.e. the page-building process
+	 * START - the top of "BakerCMS", i.e. the page-building process
 	 */
 	public function start($entrance = '')
 	{
@@ -627,7 +627,7 @@ class Hotaru
 
 
 	/**
-	 * Get Unique User Roles - DEPRECATED Hotaru 1.4.1 - Plugins should be updated to use above getRoles() instead
+	 * Get Unique User Roles - DEPRECATED BakerCMS 1.4.1 - Plugins should be updated to use above getRoles() instead
 	 *
 	 * @return array|false
 	 */
@@ -833,7 +833,7 @@ class Hotaru
 	
 	
 	/**
-	 * Get a single plugin's details for Hotaru
+	 * Get a single plugin's details for BakerCMS
 	 *
 	 * @param string $folder - plugin folder name, else $h->plugin->folder is used
 	 * @return array - $key array object, e.g. $key->plugin_id
@@ -1314,7 +1314,7 @@ class Hotaru
 	
 	
 	 /**
-	 * Display Hotaru forums feed on Admin front page
+	 * Display BakerCMS forums feed on Admin front page
 	 *
 	 * @param int $max_items
 	 * @param int $items_with_content
@@ -1534,7 +1534,7 @@ class Hotaru
 	
 	
 	/**
-	 * Hotaru CMS Smart Caching
+	 * BakerCMS Smart Caching
 	 *
 	 * This function does one query on the database to get the last updated time for a 
 	 * specified table. If that time is more recent than the $timeout length (e.g. 10 minutes),
