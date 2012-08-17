@@ -1,5 +1,5 @@
 <?php
-/* Configuration file for Hotaru CMS@*/
+/* Configuration file for BakerCMS */
 
 // Paths
 define('BASEURL', "http://example.com/");		// e.g. http://example.com/ (needs trailing slash)
@@ -7,7 +7,7 @@ define('BASEURL', "http://example.com/");		// e.g. http://example.com/ (needs tr
 // Database details
 define("DB_USER", 'root');						// Add your own database details 
 define("DB_PASSWORD", '');
-define("DB_NAME", 'hotaru');
+define("DB_NAME", 'bakercms');
 define("DB_HOST", 'localhost');					// You probably won't need to change this
 
 // You probably don't need to change these
