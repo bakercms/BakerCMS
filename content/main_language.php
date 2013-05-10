@@ -4,29 +4,29 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
- * @package   HotaruCMS
- * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @package   Baker CMS
+ * @author    Nick Ramsay / Stuart Duff
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 /* header */
-$lang["header_meta_description"] = "Hotaru CMS is an open source content management system, written in PHP.";
-$lang["header_meta_keywords"] = "hotaru, cms, platform, content, open source";
+$lang["header_meta_description"] = "Baker CMS is an open source content management system, written in PHP.";
+$lang["header_meta_keywords"] = "baker cms, cms, platform, content, open source";
 
 /* Forms */
 $lang['main_form_submit'] = "Submit";
@@ -53,7 +53,7 @@ $lang['main_hotaru_page_load_time'] = "Page load time: ";
 $lang['main_hotaru_memory_usage'] = "Memory usage: ";
 $lang['main_hotaru_php_version'] = "PHP v.";
 $lang['main_hotaru_mysql_version'] = "MySQL v.";
-$lang['main_hotaru_hotaru_version'] = "<a href='http://hotarucms.org' title='HotaruCMS.org'>Hotaru CMS</a> v.";
+$lang['main_hotaru_hotaru_version'] = "<a href='http://bakercms.com' title='Baker CMS'>Baker CMS</a> v.";
 $lang['main_hotaru_site_closed'] = SITE_NAME . " is undergoing maintenance.<br />Please come back later.";
 
 /* Announcements */
@@ -91,7 +91,7 @@ $lang["main_theme_navigation_logout"] = "Logout";
 $lang['main_theme_breadcrumbs_home'] = "Home";
 
 /* footer */
-$lang["main_theme_footer_hotaru_link"] = "HotaruCMS.org";
+$lang["main_theme_footer_hotaru_link"] = "bakercms.com";
 
 /* Forgotten Password */
 $lang['main_user_email_password_conf_sent'] = "An email has been sent to the address provided";
