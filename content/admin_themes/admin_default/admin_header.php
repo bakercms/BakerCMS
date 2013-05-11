@@ -19,7 +19,7 @@
  * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
- * @package   Hotaru CMS
+ * @package   Baker CMS
  * @author    Nick Ramsay / Stuart Duff
  * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
