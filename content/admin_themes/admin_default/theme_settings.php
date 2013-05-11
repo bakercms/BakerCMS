@@ -19,11 +19,11 @@
  * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
- * @package   HotaruCMS
- * @author    Nick Ramsay <admin@hotarucms.org>
+ * @package   Baker CMS
+ * @author    Nick Ramsay / Stuart Duff
  * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 if ($h->vars['theme_settings_csrf_error']) { 

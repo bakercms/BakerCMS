@@ -228,7 +228,7 @@ $lang['pagination_next'] = "Next";
 
 /* header */
 $lang["admin_theme_header_admin"] = "ADMIN";
-$lang["admin_theme_header_hotarucms"] = "Baker CMS ";
+$lang["admin_theme_header_Baker CMS"] = "Baker CMS ";
 $lang["admin_theme_menu_admin_home"] = "Admin Home";
 $lang["admin_theme_menu_site_home"] = "Site Home";
 $lang["admin_theme_menu_hotaru_forums"] = "Baker CMS Forums";

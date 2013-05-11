@@ -6,7 +6,7 @@
  *  Notes: ---
  *  License:
  *
- *   This file is part of Baker CMS (http://www.hotarucms.org/).
+ *   This file is part of Baker CMS (http://bakercms.com/).
  *
  *   Baker CMS is free software: you can redistribute it and/or modify it under the terms of the 
  *   GNU General Public License as published by the Free Software Foundation, either version 3 of 
@@ -19,7 +19,7 @@
  *   You should have received a copy of the GNU General Public License along with Baker CMS. If not, 
  *   see http://www.gnu.org/licenses/.
  *   
- *   Copyright (c) 2010 Baker CMS - http://www.hotarucms.org/
+ *   Copyright (c) 2010 Baker CMS - http://bakercms.com/
  *
  **************************************************************************************************** */
 

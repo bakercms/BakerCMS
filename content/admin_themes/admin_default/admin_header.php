@@ -56,7 +56,7 @@
 	<div class="admin-frame">
             	<div class="admin-header-title">
                     <img class="admin-header-logo" src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/hotaru-80px.png"/>
-            		<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_hotarucms"]; ?><?php echo $h->version; ?></div>
+            		<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_Baker CMS"]; ?><?php echo $h->version; ?></div>
 			<div class="admin-header-admin"><a href="<?php echo $h->url(array(), 'admin'); ?>"><?php echo $h->lang["admin_theme_header_admin"]; ?></a></div>
             	</div>
             	<div class="admin-top-menu">
