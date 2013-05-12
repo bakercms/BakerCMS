@@ -25,14 +25,14 @@
  * @link      http://bakercms.com/
  */
 // includes
-if( file_exists('hotaru_settings.php') ) {
-	require_once('hotaru_settings.php');
-	require_once('Hotaru.php');
+if( file_exists('bakercms_settings.php') ) {
+	require_once('bakercms_settings.php');
+	require_once('main.php');
 	$h = new Hotaru();
 	$h->start('main');
 } else {
 	if( file_exists('install/index.php') ) {
-		echo 'Hotaru is having trouble starting. You may need to install the system before you can proceed further.<br/><br/>';
+		echo 'BakerCMS is having trouble starting. You may need to install the system before you can proceed further.<br/><br/>';
 		echo 'Help is available in the <a href="http://baker.cms/forum/">BakerCMS Forums</a>.';
 	} else {
 		echo 'BakerCMS is having trouble starting.';

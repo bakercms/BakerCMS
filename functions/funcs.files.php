@@ -109,8 +109,8 @@ function startHotaru()
 		$root = '../../..'; // a hack for Wamp. Works when calling this function from a theme or plugin folder
 	}
 
-	require_once($root.'/hotaru_settings.php');
-	require_once($root.'/Hotaru.php');
+	require_once($root.'/bakercms_settings.php');
+	require_once($root.'/main.php');
 
 	$h = new Hotaru();
 	$h->start();

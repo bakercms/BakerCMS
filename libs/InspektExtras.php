@@ -169,7 +169,7 @@ class getHtmLawed extends AccessorAbstract
 		// Allow plugins to alter the value of $config/
 		// Plugins should return an array, e.g. array('safe' => 1);
 		/*
-		require_once(BASE . 'Hotaru.php');
+		require_once(BASE . 'main.php');
 		$h = new Hotaru();
 		$results = $h->pluginHook('hotaru_inspekt_htmlawed_config');
 		if (is_array($results)) {

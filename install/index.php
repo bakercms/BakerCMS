@@ -32,7 +32,7 @@
 session_start();
 
 // Read Settings
-define("SETTINGS", '../hotaru_settings.php');
+define("SETTINGS", '../bakercms_settings.php');
 
 if (file_exists(SETTINGS)) {
     include_once(SETTINGS);
@@ -62,7 +62,7 @@ if (!defined($key))
 
 require_once('install_tables.php');
 require_once('install_functions.php');
-require_once(BASE . 'Hotaru.php');
+require_once(BASE . 'main.php');
 require_once(EXTENSIONS . 'csrf/csrf_class.php'); // protection against CSRF attacks
 require_once(EXTENSIONS . 'Inspekt/Inspekt.php'); // sanitation
 require_once(EXTENSIONS . 'ezSQL/ez_sql_core.php'); // database
@@ -325,7 +325,7 @@ function database_setup() {
 	    $table_exists = $db->table_exists('miscdata');	   
 	}
 
-	// Try to write the /hotaru_settings.php file to disk
+	// Try to write the /bakercms_settings.php file to disk
 	//
         @chmod(SETTINGS,0777);
 
@@ -418,7 +418,7 @@ function database_setup() {
 
 
 /**
- * Step 1a of installation - asks to put database info in hotaru_settings.php
+ * Step 1a of installation - asks to put database info in bakercms_settings.php
  */
 function database_setup_manual()
 {
@@ -461,7 +461,7 @@ function database_upgrade()
         include_once('install-upgrade.php');
     }
     else {
-        echo 'You need to have a "hotaru_settings.php" file to upgrade Hotaru.';
+        echo 'You need to have a "bakercms_settings.php" file to upgrade Hotaru.';
     }
 }
 
@@ -872,7 +872,7 @@ define("DB_COLLATE", 'utf8_unicode_ci');		// Database Collation (UTF8 is Recomme
    ob_end_clean();
    //$page = str_replace("\n", "", $page);
    $cwd = getcwd();
-   $file = $cwd . "/../hotaru_settings.php";
+   $file = $cwd . "/../bakercms_settings.php";
    @chmod($file,0777);
    $fw = fopen($file, "w");
    $fputs = fputs($fw,$page, strlen($page));

@@ -57,7 +57,7 @@ $lang["admin_news_on"] = "on";
 $lang["admin_news_read_more"] = "Read more";
 $lang["admin_news_more_threads"] = "More recent threads...";
 
-/* Announcements /class.hotaru.php */
+/* Announcements /class.main.php */
 $lang['admin_announcement_delete_install'] = "Please delete the install folder before someone deletes your database!";
 $lang['admin_announcement_run_install'] = 'You have a new version of Baker CMS but have not run <a href="'.BASEURL.'install/upgrade.php">the upgrade script</a> yet.';
 $lang['admin_announcement_plugins_disabled'] = "Go to Plugin Management to enable some plugins.";
