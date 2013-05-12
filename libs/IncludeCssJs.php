@@ -272,10 +272,10 @@ class IncludeCssJs
 	 	// run plugin functions to include css/js files
 		if ($h->isAdmin) {
 			$h->pluginHook('admin_header_include');
-			$prefix = 'hotaru_admin_';
+			$prefix = 'bakercms_admin_';
 		} else {
 			$h->pluginHook('header_include');
-			$prefix = 'hotaru_';
+			$prefix = 'bakercms_';
 		}
 		
 		// append css or js to cache filename
@@ -379,7 +379,7 @@ class IncludeCssJs
 	 */
 	 public function includeCombined($h, $version_js = 0, $version_css = 0, $admin = false)
 	 {
-		if ($admin) { $prefix = 'hotaru_admin_'; } else { $prefix = 'hotaru_'; }
+		if ($admin) { $prefix = 'bakercms_admin_'; } else { $prefix = 'bakercms_'; }
 		
 		if ($version_js > 0) {
 			echo "<script type='text/javascript' src='" . SITEURL . "cache/css_js_cache/" . $prefix  . "js_" . $version_js . ".js'></script>\n";

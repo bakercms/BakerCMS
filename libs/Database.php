@@ -137,7 +137,7 @@ class Database extends ezSQL_mysql
 		if ($this->query_only) { return $this->prepare_array; }
 		
 		/*	Example:
-			$this->prepare_array[0] is "SELECT user_id FROM hotaru_users WHERE user_id = %d"
+			$this->prepare_array[0] is "SELECT user_id FROM bakercms_users WHERE user_id = %d"
 			$this->prepare_array[1] is "5", where 5 fills the %d
 		*/
 		

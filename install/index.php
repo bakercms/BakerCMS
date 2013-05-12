@@ -86,8 +86,8 @@ switch ($step) {
 			database_upgrade();
 		} else {
 			// Remove any cookies set in a previous installation:
-			setcookie("hotaru_user", "", time()-3600, "/");
-			setcookie("hotaru_key", "", time()-3600, "/");
+			setcookie("bakercms_user", "", time()-3600, "/");
+			setcookie("bakercms_key", "", time()-3600, "/");
 			
 			// database setup (DB name, user, password, prefix...)
 			// use this direct call instead of $db = init_database() because db may not exist yet. We need to check and control the response
@@ -293,7 +293,7 @@ function database_setup() {
                 $dbuser_name = 'admin';
                 $dbname_name = 'hotaru';
 		$dbpassword_name = '';
-                $dbprefix_name = 'hotaru_';
+                $dbprefix_name = 'bakercms_';
                 $dbhost_name = 'localhost';
                 $baseurl_name = "http://"; // . $cage->server->sanitizeTags('HTTP_HOST') . "/";
             }
@@ -752,7 +752,7 @@ function installation_complete()
 	if (!$phpinfo) { 
 		//send feedback report 
 		$systeminfo = new SystemInfo(); 
-		$systeminfo->hotaru_feedback($h); 
+		$systeminfo->bakercms_feedback($h); 
 	}
 
 	echo html_header();
@@ -827,7 +827,7 @@ function upgrade_plugins()
 
 	//send feedback report
 	$systeminfo = new SystemInfo();
-	$systeminfo->hotaru_feedback($h);
+	$systeminfo->bakercms_feedback($h);
 
 	echo "<br/>" . $lang['upgrade_step3_instructions'] . "<br/><br/>\n";
 	
@@ -861,13 +861,13 @@ define("DB_NAME", '<?php echo $dbname_name; ?>');
 define("DB_HOST", '<?php echo $dbhost_name; ?>');     			// You probably won't need to change this
 
 // You probably don't need to change these
-define("DB_PREFIX", '<?php echo $dbprefix_name; ?>');     		// Database prefix, e.g. "hotaru_"
+define("DB_PREFIX", '<?php echo $dbprefix_name; ?>');     		// Database prefix, e.g. "bakercms_"
 define("DB_LANG", 'en');            			// Database language, e.g. "en"
 define("DB_ENGINE", 'MyISAM');				// Database Engine, e.g. "MyISAM"
 define('DB_CHARSET', 'utf8');				// Database Character Set (UTF8 is Recommended), e.g. "utf8"
 define("DB_COLLATE", 'utf8_unicode_ci');		// Database Collation (UTF8 is Recommended), e.g. "utf8_unicode_ci"
 
-?><?php  // leave this line squashed up here as we dont want any blank lines at the end of the hotaru_settings file
+?><?php  // leave this line squashed up here as we dont want any blank lines at the end of the bakercms_settings file
    $page = "<?php" . ob_get_contents();
    ob_end_clean();
    //$page = str_replace("\n", "", $page);

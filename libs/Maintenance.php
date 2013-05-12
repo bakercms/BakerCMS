@@ -241,7 +241,7 @@ class Maintenance
 		else
 		{
 			// show default maintenance page:
-			echo $lang['main_hotaru_site_closed'];
+			echo $lang['main_bakercms_site_closed'];
 			echo "<br /><span id='site_closed_admin_link'>[<a href='" . SITEURL . "admin_index.php?page=admin_login'>Admin Login</a>]</span>";
 		}
 		

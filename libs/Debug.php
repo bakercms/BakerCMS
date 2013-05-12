@@ -38,12 +38,12 @@ class Debug
 			$mysql_version = $h->db->get_var("SELECT VERSION() AS VE");
 			
 			echo "<p class='debug'>";
-			echo $h->lang['main_hotaru_db_queries'] . $h->db->num_queries . " | ";
-			echo $h->lang['main_hotaru_page_load_time'] . timer_stop(1) . $h->lang['main_times_secs'] . " | ";
-			echo $h->lang['main_hotaru_memory_usage'] . display_filesize(memory_get_usage()) . " | ";
-			echo $h->lang['main_hotaru_php_version'] . phpversion() . " | ";
-			echo $h->lang['main_hotaru_mysql_version'] . $mysql_version . " | ";
-			echo $h->lang['main_hotaru_hotaru_version'] . $h->version; 
+			echo $h->lang['main_bakercms_db_queries'] . $h->db->num_queries . " | ";
+			echo $h->lang['main_bakercms_page_load_time'] . timer_stop(1) . $h->lang['main_times_secs'] . " | ";
+			echo $h->lang['main_bakercms_memory_usage'] . display_filesize(memory_get_usage()) . " | ";
+			echo $h->lang['main_bakercms_php_version'] . phpversion() . " | ";
+			echo $h->lang['main_bakercms_mysql_version'] . $mysql_version . " | ";
+			echo $h->lang['main_bakercms_bakercms_version'] . $h->version; 
 			echo "</p>"; 
 		}
 		elseif ($h->pageTemplate && function_exists('file_get_contents'))

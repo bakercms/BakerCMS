@@ -33,14 +33,14 @@ class UserAuth extends UserBase
 	public function checkCookie($h)
 	{
 		// Check for a cookie. If present then the user is logged in.
-		$h_user = $h->cage->cookie->testUsername('hotaru_user');
+		$h_user = $h->cage->cookie->testUsername('bakercms_user');
 		
-		if((!$h_user) || (!$h->cage->cookie->keyExists('hotaru_key'))) { 
+		if((!$h_user) || (!$h->cage->cookie->keyExists('bakercms_key'))) { 
 		    $this->setLoggedOutUser($h);
 		    return false; 
 		}
 		
-		$user_info=explode(":", base64_decode($h->cage->cookie->getRaw('hotaru_key')));
+		$user_info=explode(":", base64_decode($h->cage->cookie->getRaw('bakercms_key')));
 		
 		if (($h_user != $user_info[0]) || ($h->currentUser->generateHash($h_user, md5(SITEURL)) != $user_info[1])) {
 		    $this->setLoggedOutUser($h);
@@ -220,14 +220,14 @@ class UserAuth extends UserBase
 			}
 			
 			if (strpos(SITEURL, "localhost") !== false) {
-				setcookie("hotaru_user", $this->name, $month, "/");
-				setcookie("hotaru_key", $strCookie, $month, "/");
+				setcookie("bakercms_user", $this->name, $month, "/");
+				setcookie("bakercms_key", $strCookie, $month, "/");
 			} else {
 				$parsed = parse_url(SITEURL); 
 				
 				// now we need a dot in front of that so cookies work across subdomains:
-				setcookie("hotaru_user", $this->name, $month, "/", "." . $parsed['host']);
-				setcookie("hotaru_key", $strCookie, $month, "/", "." . $parsed['host']);
+				setcookie("bakercms_user", $this->name, $month, "/", "." . $parsed['host']);
+				setcookie("bakercms_key", $strCookie, $month, "/", "." . $parsed['host']);
 			}
 			return true;
 		}
@@ -242,14 +242,14 @@ class UserAuth extends UserBase
 		// setting a cookie with a negative time expires it
 		
 		if (strpos(SITEURL, "localhost") !== false) {
-			setcookie("hotaru_user", "", time()-3600, "/");
-			setcookie("hotaru_key", "", time()-3600, "/");
+			setcookie("bakercms_user", "", time()-3600, "/");
+			setcookie("bakercms_key", "", time()-3600, "/");
 		} else {
 			$parsed = parse_url(SITEURL); 
 			
 			// now we need a dot in front of that so cookies are cleared across subdomains:
-			setcookie("hotaru_user", "", time()-3600, "/", "." . $parsed['host']);
-			setcookie("hotaru_key", "", time()-3600, "/", "." . $parsed['host']);
+			setcookie("bakercms_user", "", time()-3600, "/", "." . $parsed['host']);
+			setcookie("bakercms_key", "", time()-3600, "/", "." . $parsed['host']);
 		}
 		
 		session_destroy(); // sessions are used in CSRF

@@ -30,7 +30,7 @@ class SystemInfo
 	 *
 	 * @return bool true
 	 */
-	public function hotaru_feedback($h, $format = 'json')
+	public function bakercms_feedback($h, $format = 'json')
 	{
 		$report = $h->generateReport("object");
 		
@@ -84,26 +84,26 @@ class SystemInfo
 	{
 		// essentials:
 		
-		$report['hotaru_site_name'] = SITE_NAME;
-		$report['hotaru_SITEURL'] = SITEURL;
+		$report['bakercms_site_name'] = SITE_NAME;
+		$report['bakercms_SITEURL'] = SITEURL;
 		
 		$report['php_version'] = phpversion();
 		$report['mysql_version'] = $h->db->get_var("SELECT VERSION() AS VE");
-		$report['hotaru_version'] = $h->version;
+		$report['bakercms_version'] = $h->version;
 		$report['php_extensions'] = get_loaded_extensions();
 		
 		$sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-		$report['hotaru_version_db'] = $h->db->get_var($h->db->prepare($sql, 'hotaru_version'));
+		$report['bakercms_version_db'] = $h->db->get_var($h->db->prepare($sql, 'bakercms_version'));
 		
 		// default permissions
 		
 		$sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-		$report['hotaru_permissions'] = $h->db->get_var($h->db->prepare($sql, 'permissions'));
+		$report['bakercms_permissions'] = $h->db->get_var($h->db->prepare($sql, 'permissions'));
 		
 		// default user settings
 		
 		$sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-		$report['hotaru_user_settings'] = $h->db->get_var($h->db->prepare($sql, 'user_settings'));
+		$report['bakercms_user_settings'] = $h->db->get_var($h->db->prepare($sql, 'user_settings'));
 		
 		// plugins: folder, enabled, version, order
 		
@@ -111,10 +111,10 @@ class SystemInfo
 		$plugins = $h->db->get_results($h->db->prepare($sql));
 		if ($plugins) {
 			foreach ($plugins as $plugin) {
-				$report['hotaru_plugins'][$plugin->plugin_folder]['enabled'] = $plugin->plugin_enabled;
-				$report['hotaru_plugins'][$plugin->plugin_folder]['version'] = $plugin->plugin_version;
-				$report['hotaru_plugins'][$plugin->plugin_folder]['order'] = $plugin->plugin_order;
-				$report['hotaru_plugins'][$plugin->plugin_folder]['plugin_latestversion'] = $plugin->plugin_latestversion;
+				$report['bakercms_plugins'][$plugin->plugin_folder]['enabled'] = $plugin->plugin_enabled;
+				$report['bakercms_plugins'][$plugin->plugin_folder]['version'] = $plugin->plugin_version;
+				$report['bakercms_plugins'][$plugin->plugin_folder]['order'] = $plugin->plugin_order;
+				$report['bakercms_plugins'][$plugin->plugin_folder]['plugin_latestversion'] = $plugin->plugin_latestversion;
 			}
 		}
 		
@@ -124,8 +124,8 @@ class SystemInfo
 		$plugins = $h->db->get_results($h->db->prepare($sql));
 		if ($plugins) {
 			foreach ($plugins as $plugin) {
-				$report['hotaru_plugin_hooks'][$plugin->phook_id]['folder'] = $plugin->plugin_folder;
-				$report['hotaru_plugin_hooks'][$plugin->phook_id]['hook'] = $plugin->plugin_hook;
+				$report['bakercms_plugin_hooks'][$plugin->phook_id]['folder'] = $plugin->plugin_folder;
+				$report['bakercms_plugin_hooks'][$plugin->phook_id]['hook'] = $plugin->plugin_hook;
 			}
 		}
 		
@@ -136,7 +136,7 @@ class SystemInfo
 		if ($plugins) {
 			foreach ($plugins as $plugin) {
 				if (is_serialized($plugin->plugin_value)) { $plugin->plugin_value = unserialize($plugin->plugin_value); }
-				$report['hotaru_plugin_settings'][$plugin->plugin_folder][$plugin->plugin_setting] = $this->applyMaskToArrays($h, $plugin->plugin_value);
+				$report['bakercms_plugin_settings'][$plugin->plugin_folder][$plugin->plugin_setting] = $this->applyMaskToArrays($h, $plugin->plugin_value);
 			}
 		}
 		
@@ -156,7 +156,7 @@ class SystemInfo
 						$setting->settings_value = preg_replace("/[a-zA-Z0-9]/", "*", $setting->settings_value);
 						break;
 				}
-				$report['hotaru_settings'][$setting->settings_name] = $setting->settings_value;
+				$report['bakercms_settings'][$setting->settings_name] = $setting->settings_value;
 			}
 		}
 		
@@ -166,8 +166,8 @@ class SystemInfo
 		$widgets = $h->db->get_results($h->db->prepare($sql));
 		if ($widgets) {
 			foreach ($widgets as $widget) {
-				$report['hotaru_widgets'][$widget->widget_plugin]['function'] = $widget->widget_function;
-				$report['hotaru_widgets'][$widget->widget_plugin]['args'] = $widget->widget_args;
+				$report['bakercms_widgets'][$widget->widget_plugin]['function'] = $widget->widget_function;
+				$report['bakercms_widgets'][$widget->widget_plugin]['args'] = $widget->widget_args;
 			}
 		}
 		
@@ -175,7 +175,7 @@ class SystemInfo
 		
 		foreach ( $h->db->get_col("SHOW TABLES",0) as $table_name )
 		{
-			$report['hotaru_table_count'][$table_name] = $h->db->get_var("SELECT COUNT(*) FROM " . $table_name);
+			$report['bakercms_table_count'][$table_name] = $h->db->get_var("SELECT COUNT(*) FROM " . $table_name);
 		}
 		
 		return $report;
@@ -213,10 +213,10 @@ class SystemInfo
 	{
 		$output = "\n\n";
 		
-		$output .= "Name: " . $report['hotaru_site_name'] . "\n";
-		$output .= "URL: " . $report['hotaru_SITEURL'] . "\n";
-		$output .= "Hotaru version: " . $report['hotaru_version'] . "\n";
-		$output .= "Hotaru version in database: " . $report['hotaru_version_db'] . "\n";
+		$output .= "Name: " . $report['bakercms_site_name'] . "\n";
+		$output .= "URL: " . $report['bakercms_SITEURL'] . "\n";
+		$output .= "Hotaru version: " . $report['bakercms_version'] . "\n";
+		$output .= "Hotaru version in database: " . $report['bakercms_version_db'] . "\n";
 		$output .= "PHP version: " . $report['php_version'] . "\n";
 		$output .= "MySQL version: " . $report['mysql_version'] . "\n";
 		$output .= "PHP extensions: " . implode(', ', $report['php_extensions']) . "\n";
@@ -224,7 +224,7 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Default site permissions: \n";
-		$perms = unserialize($report['hotaru_permissions']);
+		$perms = unserialize($report['bakercms_permissions']);
 		unset($perms['options']); // don't need to display these
 		foreach ($perms as $key => $value) {
 			$output .= $key . " => (";
@@ -238,7 +238,7 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Default user settings: \n";
-		$user_settings = unserialize($report['hotaru_user_settings']);
+		$user_settings = unserialize($report['bakercms_user_settings']);
 		foreach ($user_settings as $key => $value) {
 			$output .= $key . " => " . $value . "\n";
 		}
@@ -246,8 +246,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Plugins: \n";
-		if (isset($report['hotaru_plugins'])) {
-			foreach ($report['hotaru_plugins'] as $key => $value) {
+		if (isset($report['bakercms_plugins'])) {
+			foreach ($report['bakercms_plugins'] as $key => $value) {
 				$output .= $value['order'] . ". " . $key . " v." . $value['version'] . " ";
 				if ($value['enabled']) { $output .= "[enabled] \n"; } else { $output .= "[disabled] \n"; }				
 			}
@@ -256,8 +256,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Plugin Hooks: \n";
-		if (isset($report['hotaru_plugin_hooks'])) {
-			foreach ($report['hotaru_plugin_hooks'] as $key => $value) {
+		if (isset($report['bakercms_plugin_hooks'])) {
+			foreach ($report['bakercms_plugin_hooks'] as $key => $value) {
 				$output .= $key . ". " . $value['folder'] . " => " . $value['hook'] . " \n";
 			}
 		}
@@ -265,8 +265,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Plugin Settings: \n";
-		if (isset($report['hotaru_plugin_settings'])) {
-			foreach ($report['hotaru_plugin_settings'] as $key => $value) {
+		if (isset($report['bakercms_plugin_settings'])) {
+			foreach ($report['bakercms_plugin_settings'] as $key => $value) {
 				foreach ($value as $k => $v) {
 					if (!is_array($v)) {
 						$output .= "\nPlugin settings for " . $key . ":\n...." . $k . " = " . $v . " \n";
@@ -281,8 +281,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Hotaru Settings: \n";
-		if (isset($report['hotaru_settings'])) {
-			foreach ($report['hotaru_settings'] as $key => $value) {
+		if (isset($report['bakercms_settings'])) {
+			foreach ($report['bakercms_settings'] as $key => $value) {
 				$output .= $key . " => " . $value . " \n";
 			}
 		}
@@ -290,8 +290,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Widgets: \n";
-		if (isset($report['hotaru_widgets'])) {
-			foreach ($report['hotaru_widgets'] as $key => $value) {
+		if (isset($report['bakercms_widgets'])) {
+			foreach ($report['bakercms_widgets'] as $key => $value) {
 				$output .= $key . " => " . $value['function'];
 				if ($value['args']) { $output .= " (args: " . $value['args'] . ")"; }
 				$output .= "\n";
@@ -301,8 +301,8 @@ class SystemInfo
 		$output .= "\n";
 		
 		$output .= "Number of rows in each table: \n";
-		if (isset($report['hotaru_table_count'])) {
-			foreach ($report['hotaru_table_count'] as $key => $value) {
+		if (isset($report['bakercms_table_count'])) {
+			foreach ($report['bakercms_table_count'] as $key => $value) {
 				$output .= $key . " => " . $value . " \n";
 			}
 		}
@@ -333,7 +333,7 @@ class SystemInfo
 	}
 
 	/* These can be removed after the Cron plugin is updated to no longer use them */
-	public function hotaru_version() { return false; }
+	public function bakercms_version() { return false; }
 	public function plugin_version_getAll() { return false; }
 }
 ?>

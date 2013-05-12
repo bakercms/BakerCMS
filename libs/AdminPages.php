@@ -163,11 +163,11 @@ class AdminPages
 			if ($h->cage->post->keyExists('SYS_UPDATES') == 'true' ) {
 				$timestamp = time();
 				$recurrence = "daily";
-				$hook = "SystemInfo:hotaru_feedback";
+				$hook = "SystemInfo:bakercms_feedback";
 				$cron_data = array('timestamp'=>$timestamp, 'recurrence'=>$recurrence, 'hook'=>$hook);
 				$h->pluginHook('cron_update_job', 'cron', $cron_data);
 
-				$hook = "SystemInfo:hotaru_version";
+				$hook = "SystemInfo:bakercms_version";
 				$cron_data = array('timestamp'=>$timestamp, 'recurrence'=>$recurrence, 'hook'=>$hook);
 				$h->pluginHook('cron_update_job', 'cron', $cron_data);
 
@@ -176,11 +176,11 @@ class AdminPages
 				$h->pluginHook('cron_update_job', 'cron', $cron_data);
 			}
 			else {
-				$hook = "SystemInfo:hotaru_feedback";
+				$hook = "SystemInfo:bakercms_feedback";
 				$cron_data = array('hook'=>$hook);
 				$h->pluginHook('cron_delete_job', 'cron', $cron_data);
 
-				$hook = "SystemInfo:hotaru_version";
+				$hook = "SystemInfo:bakercms_version";
 				$cron_data = array('hook'=>$hook);
 				$h->pluginHook('cron_delete_job', 'cron', $cron_data);
 

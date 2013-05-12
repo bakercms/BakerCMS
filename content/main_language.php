@@ -48,13 +48,13 @@ $lang["main_settings_not_saved"] = "Error! Settings not saved";
 $lang['main_userbase_cookie_error'] = "Error setting cookie. Username not provided.";
 
 /* Debug / Maintenance */
-$lang['main_hotaru_db_queries'] = "Database queries: ";
-$lang['main_hotaru_page_load_time'] = "Page load time: ";
-$lang['main_hotaru_memory_usage'] = "Memory usage: ";
-$lang['main_hotaru_php_version'] = "PHP v.";
-$lang['main_hotaru_mysql_version'] = "MySQL v.";
-$lang['main_hotaru_hotaru_version'] = "<a href='http://bakercms.com' title='Baker CMS'>Baker CMS</a> v.";
-$lang['main_hotaru_site_closed'] = SITE_NAME . " is undergoing maintenance.<br />Please come back later.";
+$lang['main_bakercms_db_queries'] = "Database queries: ";
+$lang['main_bakercms_page_load_time'] = "Page load time: ";
+$lang['main_bakercms_memory_usage'] = "Memory usage: ";
+$lang['main_bakercms_php_version'] = "PHP v.";
+$lang['main_bakercms_mysql_version'] = "MySQL v.";
+$lang['main_bakercms_bakercms_version'] = "<a href='http://bakercms.com' title='Baker CMS'>Baker CMS</a> v.";
+$lang['main_bakercms_site_closed'] = SITE_NAME . " is undergoing maintenance.<br />Please come back later.";
 
 /* Announcements */
 $lang['main_announcement_users_disabled'] = "Login and registration is currently disabled.";
@@ -91,7 +91,7 @@ $lang["main_theme_navigation_logout"] = "Logout";
 $lang['main_theme_breadcrumbs_home'] = "Home";
 
 /* footer */
-$lang["main_theme_footer_hotaru_link"] = "bakercms.com";
+$lang["main_theme_footer_bakercms_link"] = "bakercms.com";
 
 /* Forgotten Password */
 $lang['main_user_email_password_conf_sent'] = "An email has been sent to the address provided";

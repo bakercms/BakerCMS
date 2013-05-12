@@ -31,7 +31,7 @@
 
 $h = new Hotaru(); // must come before language inclusion
 $sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-$old_version = $h->db->get_var($h->db->prepare($sql, "hotaru_version"));
+$old_version = $h->db->get_var($h->db->prepare($sql, "bakercms_version"));
 //require_once(INSTALL . 'install_language.php');    // language file for install
 
 // delete existing cache
@@ -690,7 +690,7 @@ function do_upgrade($h, $old_version)
 
 	// Update Hotaru version number to the database (referred to when upgrading)
 	$sql = "UPDATE " . TABLE_MISCDATA . " SET miscdata_key = %s, miscdata_value = %s, miscdata_default = %s WHERE miscdata_key = %s";
-	$h->db->query($h->db->prepare($sql, 'hotaru_version', $h->version, $h->version, 'hotaru_version'));
+	$h->db->query($h->db->prepare($sql, 'bakercms_version', $h->version, $h->version, 'bakercms_version'));
 }
 
 ?>

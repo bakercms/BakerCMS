@@ -64,9 +64,9 @@ class Announcements
 		}
 		
 		// Plugins can add announcements with this:
-		$h->vars['hotaru_announcements'] = $announcements;
-		$h->pluginHook('hotaru_announcements');
-		$announcements = $h->vars['hotaru_announcements'];
+		$h->vars['bakercms_announcements'] = $announcements;
+		$h->pluginHook('bakercms_announcements');
+		$announcements = $h->vars['bakercms_announcements'];
 		
 		if (!is_array($announcements)) {
 			return false;
@@ -95,8 +95,8 @@ class Announcements
 		
 		// Check if install file has not been run
 		$sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-		$hotaru_version = $h->db->get_var($h->db->prepare($sql, 'hotaru_version'));
-		if (version_compare($h->version, $hotaru_version, '>')) {
+		$bakercms_version = $h->db->get_var($h->db->prepare($sql, 'bakercms_version'));
+		if (version_compare($h->version, $bakercms_version, '>')) {
 			array_push($announcements, $h->lang['admin_announcement_run_install']);
 		}
 		

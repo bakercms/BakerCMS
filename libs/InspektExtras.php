@@ -171,7 +171,7 @@ class getHtmLawed extends AccessorAbstract
 		/*
 		require_once(BASE . 'main.php');
 		$h = new Hotaru();
-		$results = $h->pluginHook('hotaru_inspekt_htmlawed_config');
+		$results = $h->pluginHook('bakercms_inspekt_htmlawed_config');
 		if (is_array($results)) {
 			foreach ($results as $res) {
 				// THIS LOOKS WEIRD. IT NEEDS A RETHINK /Nick

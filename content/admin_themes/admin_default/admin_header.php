@@ -83,7 +83,7 @@
 			    <div class="admin-menu-item-icon">
 				<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/forum_icon.png "/>
 			    </div>
-			    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_hotaru_forums"]; ?></div>
+			    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_bakercms_forums"]; ?></div>
 			</a>
 		    </div>
 

@@ -69,7 +69,7 @@ class Trackback
 	{
 		// Fetch the content of the original url...
 		$url = $h->post->origUrl;
-		$content = ($url != 'http://' && $url != '') ? hotaru_http_request($url) : '';
+		$content = ($url != 'http://' && $url != '') ? bakercms_http_request($url) : '';
 		$trackback = '';
 
 		if (preg_match('/trackback:ping="([^"]+)"/i', $content, $matches) ||

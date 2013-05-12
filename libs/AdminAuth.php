@@ -238,14 +238,14 @@ class AdminAuth
 			$month = 2592000 + time();
 			
 			if (strpos(SITEURL, "localhost") !== false) {
-			     setcookie("hotaru_user", $h->currentUser->name, $month, "/");
-			     setcookie("hotaru_key", $strCookie, $month, "/");
+			     setcookie("bakercms_user", $h->currentUser->name, $month, "/");
+			     setcookie("bakercms_key", $strCookie, $month, "/");
 			} else {
 			     $parsed = parse_url(SITEURL); 
 			                
 			     // now we need a dot in front of that so cookies work across subdomains:
-			     setcookie("hotaru_user", $h->currentUser->name, $month, "/", "." . $parsed['host']);
-			     setcookie("hotaru_key", $strCookie, $month, "/", "." . $parsed['host']);
+			     setcookie("bakercms_user", $h->currentUser->name, $month, "/", "." . $parsed['host']);
+			     setcookie("bakercms_key", $strCookie, $month, "/", "." . $parsed['host']);
 			}  
 			
 			return true;

@@ -1,6 +1,6 @@
 <?php
 
-function hotaru_http_request($url)
+function bakercms_http_request($url)
 {
 	if(substr($url, 0, 4) != 'http')
 	{
@@ -67,7 +67,7 @@ function hotaru_http_request($url)
 
 	// redirection?
 	if (isset($headers['location'])) {
-		return hotaru_http_request($headers['location']);
+		return bakercms_http_request($headers['location']);
 	}
 
 	return $body;
