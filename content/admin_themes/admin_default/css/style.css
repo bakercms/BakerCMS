@@ -7,6 +7,7 @@ body {
   min-height: 100%;
   height: 100%;
   font-size: 0.9em;
+  background: #e7e7e7;
 }
 .clear {
   clear: both;
@@ -219,6 +220,9 @@ form {
   height: 32px;
   vertical-align: middle;
   cursor: pointer;
+}
+#bd {
+  background: white;
 }
 /* *************************************
 *  Admin Header page *
