@@ -42,7 +42,8 @@
 	<?php $h->doIncludes(); ?>
 	<!-- End -->
 	
-	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/reset-fonts-grids.css'; ?>" type="text/css">
+	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/reset.css'; ?>" type="text/css">
+	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/960_12_col.css'; ?>" type="text/css">
 	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/font-awesome.css'; ?>" type="text/css">
 	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/style.css'; ?>" type="text/css">
 	<!-- <link rel="shortcut icon" href="<?php echo SITEURL; ?>favicon.ico"> -->
@@ -53,8 +54,8 @@
 <body>
 
 
-    <div class="admin-header">
-	<div class="admin-frame">
+    <header class="admin-header">
+	<div class="container_12">
             <div class="admin-header-title">
                 <img class="admin-header-logo" src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/hotaru-80px.png"/>
             	<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_baker_cms"]; ?><?php echo $h->version; ?></div>
@@ -93,7 +94,7 @@
 	    <div class="clear_both">&nbsp;</div>
 
         </div>
-    </div>
+    </header>
 
 
 <?php
@@ -102,11 +103,13 @@
 	?>
 	<div id="announcement">
 		<?php $h->pluginHook('admin_announcement_first'); ?>
-		<?php foreach ($announcements as $announcement) { echo $announcement . "<br />"; } ?>
+		<?php foreach ($announcements as $announcement) { echo "<p>" . $announcement . "</p>"; } ?>
 		<?php $h->pluginHook('admin_announcement_last'); ?>
 	</div>
 <?php } ?>
-<div id="doc2" class="yui-t7">
+
+
+<div id="content-wrapper" class="container_12">
 <!--	<div id="hd" role="banner">
 		<h1>
 		 <?php   if($h->isActive('avatar')) {
@@ -119,5 +122,3 @@
 		 NAVIGATION 
 		<?php //echo $h->displayTemplate('admin_navigation'); ?>
 	</div>-->
-
-	<br/>

@@ -28,10 +28,8 @@
 
 ?>
 
-<table id='admin-home'>
-<tr>
 
-<td id='left'>
+<div id='content-left'>
 	 
 <!-- TITLE FOR ADMIN NEWS -->
 	<h2>
@@ -46,9 +44,9 @@
 	
 	<br/>
 	 <h2><?php echo $h->lang["admin_theme_main_join_us"]; ?></h2>
-</td>
+</div>
 
-<td id='right'>
+<div id='sidebar-right'>
 	<h2><?php echo SITE_NAME . " " . $h->lang["admin_theme_main_stats"]; ?></h2>
 	<ul id="site-stats">
 		<li>Baker CMS <?php echo $h->version; ?></li>
@@ -58,7 +56,6 @@
 		<?php $h->pluginHook('admin_theme_main_stats', 'post_manager', array('posts' => array('all', 'approved', 'pending', 'buried', 'archived'))); ?>
 		<?php $h->pluginHook('admin_theme_main_stats', 'comments', array('comments' => array('all', 'approved', 'pending', 'archived'))); ?>
 	</ul>
-</td>
+</div>
 
-</tr>
-</table>
+

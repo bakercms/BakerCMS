@@ -43,13 +43,23 @@ if (!$result) {
 	}
 ?>
 
-<div id="bd" role="main">
+<div id="inner-wrapper" role="main">
+			<?php if ($h->sidebars) { ?>
+				<div class="grid_3">
+				<!-- SIDEBAR -->
+				<?php
+					// plugin hook
+					$result = $h->pluginHook('admin_theme_index_sidebar');
+					if (!$result) {
+						$h->displayTemplate('admin_sidebar');
+					}
+				?>
+				</div>
+			<?php } ?>	
 	<?php if ($h->sidebars) { ?>
-		<div class='yui-gf'> 
-		<div class="yui-u">
+		<div class="grid_9">
 	<?php } else { ?>
-		<div class='yui-g'>
-			<div class="yui-u" style='width: 100%;'>
+			<div class="grid_12">
 	<?php } ?>
 				<!-- BREADCRUMBS -->
 				<div class="">
@@ -83,19 +93,6 @@ if (!$result) {
 				?>
 				</div> 
 			</div>
-			<?php if ($h->sidebars) { ?>
-				<div class="yui-u first">
-				<!-- SIDEBAR -->
-				<?php
-					// plugin hook
-					$result = $h->pluginHook('admin_theme_index_sidebar');
-					if (!$result) {
-						$h->displayTemplate('admin_sidebar');
-					}
-				?>
-				</div>
-			<?php } ?>
-	</div>
 </div>
 <!-- FOOTER -->
 <?php
