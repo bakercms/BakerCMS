@@ -1,6 +1,6 @@
 <?php
 /**
- * Upgrade Hotaru CMS
+ * Upgrade Baker CMS
  * 
  * Steps through the set-up process, creating database tables and registering 
  * the Admin user. Note: You must delete this file after installation as it 
@@ -8,30 +8,30 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
  * @package   HotaruCMS
  * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 
 $h = new Hotaru(); // must come before language inclusion
 $sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-$old_version = $h->db->get_var($h->db->prepare($sql, "hotaru_version"));
+$old_version = $h->db->get_var($h->db->prepare($sql, "bakercms_version"));
 //require_once(INSTALL . 'install_language.php');    // language file for install
 
 // delete existing cache
@@ -45,7 +45,7 @@ $step = $h->cage->get->getInt('step');        // Installation steps.
 
 switch ($step) {
 	case 0:
-		//upgrade_welcome();     // "Welcome to Hotaru CMS.
+		//upgrade_welcome();     // "Welcome to Baker CMS.
 		break;
 	case 1:
 		upgrade_check($h, $old_version);
@@ -690,7 +690,7 @@ function do_upgrade($h, $old_version)
 
 	// Update Hotaru version number to the database (referred to when upgrading)
 	$sql = "UPDATE " . TABLE_MISCDATA . " SET miscdata_key = %s, miscdata_value = %s, miscdata_default = %s WHERE miscdata_key = %s";
-	$h->db->query($h->db->prepare($sql, 'hotaru_version', $h->version, $h->version, 'hotaru_version'));
+	$h->db->query($h->db->prepare($sql, 'bakercms_version', $h->version, $h->version, 'bakercms_version'));
 }
 
 ?>

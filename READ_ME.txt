@@ -20,7 +20,7 @@ Upgrading
 ---------
 
  1. Backup your database.
- 2. Download the latest version of Hotaru CMS.
+ 2. Download the latest version of Baker CMS.
  3. Turn off all your plugins.
  4. Overwrite ALL the old files. If you've made any customizations, read this
     first: http://bakercms.com/codex/file-structure/
@@ -32,10 +32,10 @@ Upgrading
 First-time Installation
 -----------------------
 
- 1. Download the latest version of Hotaru CMS.
+ 1. Download the latest version of Baker CMS.
  2. Create a database called `hotaru` in phpMyAdmin (or equivalent).
- 3. Rename `/hotaru_settings_default.php` to `/hotaru_settings.php`.
- 4. Open `/hotaru_settings.php` and edit the top section with your database
+ 3. Rename `/bakercms_settings_default.php` to `/bakercms_settings.php`.
+ 4. Open `/bakercms_settings.php` and edit the top section with your database
     details and path to Hotaru, e.g. http://example.com/
  5. Upload the contents of the `hotaru` folder to your server.
  6. Files should have permissions set to 644 and folders should be set to 755,

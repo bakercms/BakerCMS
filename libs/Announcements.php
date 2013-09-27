@@ -4,24 +4,24 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
  * @package   HotaruCMS
  * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 class Announcements
 {
@@ -64,9 +64,9 @@ class Announcements
 		}
 		
 		// Plugins can add announcements with this:
-		$h->vars['hotaru_announcements'] = $announcements;
-		$h->pluginHook('hotaru_announcements');
-		$announcements = $h->vars['hotaru_announcements'];
+		$h->vars['bakercms_announcements'] = $announcements;
+		$h->pluginHook('bakercms_announcements');
+		$announcements = $h->vars['bakercms_announcements'];
 		
 		if (!is_array($announcements)) {
 			return false;
@@ -95,8 +95,8 @@ class Announcements
 		
 		// Check if install file has not been run
 		$sql = "SELECT miscdata_value FROM " . TABLE_MISCDATA . " WHERE miscdata_key = %s";
-		$hotaru_version = $h->db->get_var($h->db->prepare($sql, 'hotaru_version'));
-		if (version_compare($h->version, $hotaru_version, '>')) {
+		$bakercms_version = $h->db->get_var($h->db->prepare($sql, 'bakercms_version'));
+		if (version_compare($h->version, $bakercms_version, '>')) {
 			array_push($announcements, $h->lang['admin_announcement_run_install']);
 		}
 		

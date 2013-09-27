@@ -4,24 +4,24 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
- * @package   HotaruCMS
- * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @package   Baker CMS
+ * @author    Nick Ramsay / Stuart Duff
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 /* Title */
@@ -57,9 +57,9 @@ $lang["admin_news_on"] = "on";
 $lang["admin_news_read_more"] = "Read more";
 $lang["admin_news_more_threads"] = "More recent threads...";
 
-/* Announcements /class.hotaru.php */
+/* Announcements /class.main.php */
 $lang['admin_announcement_delete_install'] = "Please delete the install folder before someone deletes your database!";
-$lang['admin_announcement_run_install'] = 'You have a new version of Hotaru but have not run <a href="'.BASEURL.'install/upgrade.php">the upgrade script</a> yet.';
+$lang['admin_announcement_run_install'] = 'You have a new version of Baker CMS but have not run <a href="'.BASEURL.'install/upgrade.php">the upgrade script</a> yet.';
 $lang['admin_announcement_plugins_disabled'] = "Go to Plugin Management to enable some plugins.";
 $lang['admin_announcement_users_disabled'] = "Please enable the Users plugin in Plugin Management.";
 $lang['admin_announcement_change_site_email'] = "Please change the site email address in the Settings page.";
@@ -128,7 +128,7 @@ $lang['admin_settings_update_success'] = "Updated successfully";
 $lang['admin_settings_update_failure'] = "Error saving settings";
 $lang["admin_settings_theme_activate_success"] = "Theme was activated successfully.";
 $lang["admin_theme_settings"] = "Settings";
-$lang["admin_theme_settings_title"] = "Hotaru Settings";
+$lang["admin_theme_settings_title"] = "Baker CMS Settings";
 $lang["admin_theme_settings_setting"] = "Setting";
 $lang["admin_theme_settings_value"] = "Value";
 $lang["admin_theme_settings_default"] = "Default";
@@ -148,10 +148,10 @@ $lang["admin_maintenance_site_opened"] = SITE_NAME . " will be opened next page 
 $lang['admin_maintenance_announcement_updated'] = "Site announcement updated";
 $lang['admin_maintenance_system_report_success'] = "New system report generated";
 $lang['admin_maintenance_system_report_failure'] = "Unable to generate a system report";
-$lang['admin_maintenance_system_report_emailed'] = "System report emailed to HotaruCMS.org";
+$lang['admin_maintenance_system_report_emailed'] = "System report emailed to bakercms.com";
 
 $lang["admin_theme_maintenance"] = "Maintenance";
-$lang["admin_theme_maintenance_title"] = "Hotaru Maintenance";
+$lang["admin_theme_maintenance_title"] = "Baker CMS Maintenance";
 $lang["admin_theme_maintenance_site"] = "Site:";
 $lang["admin_theme_maintenance_announcement"] = "Display this announcement at the top of every page:";
 $lang["admin_theme_maintenance_announcement_enable"] = "Enabled";
@@ -178,7 +178,7 @@ $lang["admin_theme_maintenance_rss_cache"] = "Clear RSS cache";
 $lang["admin_theme_maintenance_rss_cache_desc"] = "deletes cached RSS feeds.";
 $lang["admin_theme_maintenance_debug"] = "Debug:";
 $lang["admin_theme_maintenance_system_report"] = "Generate a system report";
-$lang["admin_theme_maintenance_email_system_report"] = "Email a system report to HotaruCMS.org";
+$lang["admin_theme_maintenance_email_system_report"] = "Email a system report to bakercms.com";
 $lang["admin_theme_maintenance_email_system_report_note"] = "<span style='color: red'>(Only use if requested in the forums)</span>";
 $lang["admin_theme_maintenance_debug_delete"] = "Clear debug files from the cache";
 $lang["admin_theme_maintenance_debug_view"] = "Click the filenames to view the logs:";
@@ -190,7 +190,7 @@ $lang["admin_theme_maintenance_empty"] = "Empty";
 $lang["admin_theme_maintenance_remove"] = "Remove";
 $lang["admin_theme_maintenance_drop"] = "Delete";
 $lang["admin_theme_maintenance_db_table_warning"] = "<b>Warning: Use with extreme caution!</b>";
-$lang["admin_theme_maintenance_plugin_settings_explanation"] = "Some Hotaru CMS plugins add settings to the database. To save you from having to reconfigure your plugins every time you upgrade, those settings are not removed, even when uninstalling the plugins. If for any reason, you want to delete those settings, you can do it here. It's highly recommended to uninstall each plugin first.";
+$lang["admin_theme_maintenance_plugin_settings_explanation"] = "Some Baker CMS plugins add settings to the database. To save you from having to reconfigure your plugins every time you upgrade, those settings are not removed, even when uninstalling the plugins. If for any reason, you want to delete those settings, you can do it here. It's highly recommended to uninstall each plugin first.";
 $lang["admin_theme_maintenance_empty_explanation"] = "Emptying tables will remove any data, but retain the structure. Remember, some plugins may rely on the data in these tables so removing them may cause problems for your site. Unless advised to empty tables by a developer, it's best to leave these alone.";
 $lang["admin_theme_maintenance_no_db_tables_to_empty"] = "No database tables to empty.";
 $lang["admin_theme_maintenance_no_plugin_settings_to_delete"] = "No plugin settings to delete.";
@@ -228,10 +228,10 @@ $lang['pagination_next'] = "Next";
 
 /* header */
 $lang["admin_theme_header_admin"] = "ADMIN";
-$lang["admin_theme_header_hotarucms"] = "Hotaru CMS ";
+$lang["admin_theme_header_Baker CMS"] = "Baker CMS ";
 $lang["admin_theme_menu_admin_home"] = "Admin Home";
 $lang["admin_theme_menu_site_home"] = "Site Home";
-$lang["admin_theme_menu_hotaru_forums"] = "Hotaru Forums";
+$lang["admin_theme_menu_bakercms_forums"] = "Baker CMS Forums";
 $lang["admin_theme_menu_help"] = "Documentation";
 $lang["admin_theme_menu_logout"] = "Logout";
 
@@ -244,10 +244,10 @@ $lang["admin_theme_navigation_logout"] = "Logout";
 /* main */
 $lang["admin_theme_main_admin_cp"] = "Admin Control Panel";
 $lang["admin_theme_main_admin_home"] = "Admin Home";
-$lang["admin_theme_main_latest"] = "Latest from Hotaru CMS";
+$lang["admin_theme_main_latest"] = "Latest from Baker CMS";
 $lang["admin_theme_main_stats"] = "Stats";
 $lang["admin_theme_main_help"] = "See anything you can help with?";
-$lang["admin_theme_main_join_us"] = "Join Hotaru on <a href='http://www.facebook.com/hotarucms'>Facebook</a> and <a href='http://twitter.com/hotarucms'>Twitter</a>!";
+$lang["admin_theme_main_join_us"] = "Join Baker CMS on <a href='http://www.facebook.com/'>Facebook</a> and <a href='https://twitter.com/BakerCMS'>Twitter</a>!";
 
 /* theme settings */
 $lang["admin_theme_plugin_settings"] = "Plugin Settings";
@@ -261,7 +261,7 @@ $lang["admin_theme_theme_revert_settings"] = "Revert this theme to its default s
 
 
 /* footer */
-$lang["admin_theme_footer_having_trouble_vist_forums"] = "Having trouble? Read the <a href='http://docs.hotarucms.org'>Documentation</a> or ask for help in the <a href='http://forums.hotarucms.org'>Forums</a>.";
+$lang["admin_theme_footer_having_trouble_vist_forums"] = "Having trouble? Read the <a href='http://bakercms.com/codex-docs/'>Documentation</a> or ask for help in the <a href='http://bakercms.com/forum/index.php'>Forums</a>.";
 
 /* 404 */
 $lang["admin_theme_404_page_not_found"] = "Page not found.";

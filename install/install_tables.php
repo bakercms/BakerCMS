@@ -1,6 +1,6 @@
 <?php
 /**
- * Install database tables for Hotaru CMS.
+ * Install database tables for Baker CMS.
  * 
  * Steps through the set-up process, creating database tables and registering 
  * the Admin user. Note: You must delete this file after installation as it 
@@ -8,24 +8,24 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
  * @package   HotaruCMS
  * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 /**
@@ -189,7 +189,7 @@ function create_table($table_name)
 		
 		// Add Hotaru version number to the database (referred to when upgrading)
 		$sql = "INSERT INTO " . DB_PREFIX . $table_name . " (miscdata_key, miscdata_value, miscdata_default) VALUES (%s, %s, %s)";
-		$db->query($db->prepare($sql, 'hotaru_version', $h->version, $h->version));
+		$db->query($db->prepare($sql, 'bakercms_version', $h->version, $h->version));
 		
 		// Default permissions
 		$perms['options']['can_access_admin'] = array('yes', 'no');
@@ -370,7 +370,7 @@ function create_table($table_name)
 		
 		// Site name
 		$sql = "INSERT INTO " . DB_PREFIX . $table_name . " (settings_name, settings_value, settings_default, settings_note) VALUES (%s, %s, %s, %s)";
-		$db->query($db->prepare($sql, 'SITE_NAME', 'Hotaru CMS', 'Hotaru CMS', ''));
+		$db->query($db->prepare($sql, 'SITE_NAME', 'Baker CMS', 'Baker CMS', ''));
 		
 		// Main theme
 		$sql = "INSERT INTO " . DB_PREFIX . $table_name . " (settings_name, settings_value, settings_default, settings_note) VALUES (%s, %s, %s, %s)";

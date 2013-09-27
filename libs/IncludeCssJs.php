@@ -4,24 +4,24 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or 
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
  * published by the Free Software Foundation, either version 3 of 
  * the License, or (at your option) any later version. 
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT 
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT 
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
  * FITNESS FOR A PARTICULAR PURPOSE. 
  *
  * You should have received a copy of the GNU General Public License along 
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  * 
  * @category  Content Management System
  * @package   HotaruCMS
  * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 class IncludeCssJs
 {
@@ -272,10 +272,10 @@ class IncludeCssJs
 	 	// run plugin functions to include css/js files
 		if ($h->isAdmin) {
 			$h->pluginHook('admin_header_include');
-			$prefix = 'hotaru_admin_';
+			$prefix = 'bakercms_admin_';
 		} else {
 			$h->pluginHook('header_include');
-			$prefix = 'hotaru_';
+			$prefix = 'bakercms_';
 		}
 		
 		// append css or js to cache filename
@@ -379,7 +379,7 @@ class IncludeCssJs
 	 */
 	 public function includeCombined($h, $version_js = 0, $version_css = 0, $admin = false)
 	 {
-		if ($admin) { $prefix = 'hotaru_admin_'; } else { $prefix = 'hotaru_'; }
+		if ($admin) { $prefix = 'bakercms_admin_'; } else { $prefix = 'bakercms_'; }
 		
 		if ($version_js > 0) {
 			echo "<script type='text/javascript' src='" . SITEURL . "cache/css_js_cache/" . $prefix  . "js_" . $version_js . ".js'></script>\n";

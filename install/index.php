@@ -1,6 +1,6 @@
 <?php
 /**
- * Install Hotaru CMS
+ * Install Baker CMS
  *
  * Steps through the set-up process, creating database tables and registering
  * the Admin user. Note: You must delete this file after installation as it
@@ -8,31 +8,31 @@
  *
  * PHP version 5
  *
- * LICENSE: Hotaru CMS is free software: you can redistribute it and/or
+ * LICENSE: Baker CMS is free software: you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version.
  *
- * Hotaru CMS is distributed in the hope that it will be useful, but WITHOUT
+ * Baker CMS is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE.
  *
  * You should have received a copy of the GNU General Public License along
- * with Hotaru CMS. If not, see http://www.gnu.org/licenses/.
+ * with Baker CMS. If not, see http://www.gnu.org/licenses/.
  *
  * @category  Content Management System
  * @package   HotaruCMS
  * @author    Nick Ramsay <admin@hotarucms.org>
- * @copyright Copyright (c) 2010, Hotaru CMS
+ * @copyright Copyright (c) 2010, Baker CMS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link      http://www.hotarucms.org/
+ * @link      http://bakercms.com/
  */
 
 // start session:
 session_start();
 
 // Read Settings
-define("SETTINGS", '../hotaru_settings.php');
+define("SETTINGS", '../bakercms_settings.php');
 
 if (file_exists(SETTINGS)) {
     include_once(SETTINGS);
@@ -62,7 +62,7 @@ if (!defined($key))
 
 require_once('install_tables.php');
 require_once('install_functions.php');
-require_once(BASE . 'Hotaru.php');
+require_once(BASE . 'main.php');
 require_once(EXTENSIONS . 'csrf/csrf_class.php'); // protection against CSRF attacks
 require_once(EXTENSIONS . 'Inspekt/Inspekt.php'); // sanitation
 require_once(EXTENSIONS . 'ezSQL/ez_sql_core.php'); // database
@@ -79,15 +79,15 @@ $action = $cage->get->getAlpha('action');    // Install or Upgrade.
 
 switch ($step) {
 	case 0:
-		installation_welcome();     // "Welcome to Hotaru CMS.
+		installation_welcome();     // "Welcome to Baker CMS.
 		break;
 	case 1: 
 		if ($action == 'upgrade') {
 			database_upgrade();
 		} else {
 			// Remove any cookies set in a previous installation:
-			setcookie("hotaru_user", "", time()-3600, "/");
-			setcookie("hotaru_key", "", time()-3600, "/");
+			setcookie("bakercms_user", "", time()-3600, "/");
+			setcookie("bakercms_key", "", time()-3600, "/");
 			
 			// database setup (DB name, user, password, prefix...)
 			// use this direct call instead of $db = init_database() because db may not exist yet. We need to check and control the response
@@ -293,7 +293,7 @@ function database_setup() {
                 $dbuser_name = 'admin';
                 $dbname_name = 'hotaru';
 		$dbpassword_name = '';
-                $dbprefix_name = 'hotaru_';
+                $dbprefix_name = 'bakercms_';
                 $dbhost_name = 'localhost';
                 $baseurl_name = "http://"; // . $cage->server->sanitizeTags('HTTP_HOST') . "/";
             }
@@ -325,7 +325,7 @@ function database_setup() {
 	    $table_exists = $db->table_exists('miscdata');	   
 	}
 
-	// Try to write the /hotaru_settings.php file to disk
+	// Try to write the /bakercms_settings.php file to disk
 	//
         @chmod(SETTINGS,0777);
 
@@ -418,7 +418,7 @@ function database_setup() {
 
 
 /**
- * Step 1a of installation - asks to put database info in hotaru_settings.php
+ * Step 1a of installation - asks to put database info in bakercms_settings.php
  */
 function database_setup_manual()
 {
@@ -461,7 +461,7 @@ function database_upgrade()
         include_once('install-upgrade.php');
     }
     else {
-        echo 'You need to have a "hotaru_settings.php" file to upgrade Hotaru.';
+        echo 'You need to have a "bakercms_settings.php" file to upgrade Hotaru.';
     }
 }
 
@@ -752,7 +752,7 @@ function installation_complete()
 	if (!$phpinfo) { 
 		//send feedback report 
 		$systeminfo = new SystemInfo(); 
-		$systeminfo->hotaru_feedback($h); 
+		$systeminfo->bakercms_feedback($h); 
 	}
 
 	echo html_header();
@@ -827,7 +827,7 @@ function upgrade_plugins()
 
 	//send feedback report
 	$systeminfo = new SystemInfo();
-	$systeminfo->hotaru_feedback($h);
+	$systeminfo->bakercms_feedback($h);
 
 	echo "<br/>" . $lang['upgrade_step3_instructions'] . "<br/><br/>\n";
 	
@@ -849,7 +849,7 @@ function create_new_settings_file($dbuser_name, $dbpassword_name, $dbname_name, 
 
    ?>
 
- /* Configuration file for Hotaru CMS. */
+ /* Configuration file for Baker CMS. */
 
 // Paths
 define("BASEURL", '<?php echo $baseurl_name; ?>');    // e.g. http://www.mysite.com/    Needs trailing slash (/)
@@ -861,18 +861,18 @@ define("DB_NAME", '<?php echo $dbname_name; ?>');
 define("DB_HOST", '<?php echo $dbhost_name; ?>');     			// You probably won't need to change this
 
 // You probably don't need to change these
-define("DB_PREFIX", '<?php echo $dbprefix_name; ?>');     		// Database prefix, e.g. "hotaru_"
+define("DB_PREFIX", '<?php echo $dbprefix_name; ?>');     		// Database prefix, e.g. "bakercms_"
 define("DB_LANG", 'en');            			// Database language, e.g. "en"
 define("DB_ENGINE", 'MyISAM');				// Database Engine, e.g. "MyISAM"
 define('DB_CHARSET', 'utf8');				// Database Character Set (UTF8 is Recommended), e.g. "utf8"
 define("DB_COLLATE", 'utf8_unicode_ci');		// Database Collation (UTF8 is Recommended), e.g. "utf8_unicode_ci"
 
-?><?php  // leave this line squashed up here as we dont want any blank lines at the end of the hotaru_settings file
+?><?php  // leave this line squashed up here as we dont want any blank lines at the end of the bakercms_settings file
    $page = "<?php" . ob_get_contents();
    ob_end_clean();
    //$page = str_replace("\n", "", $page);
    $cwd = getcwd();
-   $file = $cwd . "/../hotaru_settings.php";
+   $file = $cwd . "/../bakercms_settings.php";
    @chmod($file,0777);
    $fw = fopen($file, "w");
    $fputs = fputs($fw,$page, strlen($page));

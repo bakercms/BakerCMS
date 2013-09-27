@@ -324,7 +324,7 @@
          * @param string $table2check
          * @return bool
          *
-         * Notes: This is a custom function for Hotaru CMS
+         * Notes: This is a custom function for Baker CMS
          */
  
         function table_exists($table2check) {
@@ -340,7 +340,7 @@
          * @param string $table2check
          * @return bool
          *
-         * Notes: This is a custom function for Hotaru CMS
+         * Notes: This is a custom function for Baker CMS
          */
         function table_empty($table2check) {
             $rowcount = $this->get_var($this->prepare("SELECT COUNT(*) FROM " . DB_PREFIX . $table2check));
@@ -358,7 +358,7 @@
          * @param string $column
          * @return bool
          *
-         * Notes: This is a custom function for Hotaru CMS
+         * Notes: This is a custom function for Baker CMS
          */
         function column_exists($table2check, $column)
         {
