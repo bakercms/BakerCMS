@@ -43,6 +43,7 @@
 	<!-- End -->
 	
 	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/reset-fonts-grids.css'; ?>" type="text/css">
+	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/font-awesome.css'; ?>" type="text/css">
 	<link rel="stylesheet" href="<?php echo SITEURL . 'content/admin_themes/' . ADMIN_THEME . 'css/style.css'; ?>" type="text/css">
 	<!-- <link rel="shortcut icon" href="<?php echo SITEURL; ?>favicon.ico"> -->
 	
@@ -54,59 +55,43 @@
 
     <div class="admin-header">
 	<div class="admin-frame">
-            	<div class="admin-header-title">
-                    <img class="admin-header-logo" src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/hotaru-80px.png"/>
-            		<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_Baker CMS"]; ?><?php echo $h->version; ?></div>
-			<div class="admin-header-admin"><a href="<?php echo $h->url(array(), 'admin'); ?>"><?php echo $h->lang["admin_theme_header_admin"]; ?></a></div>
-            	</div>
-            	<div class="admin-top-menu">
-		    <div class="admin-menu-item">
-			<a href="<?php echo SITEURL; ?>">
-			    <div class="admin-menu-item-icon">
-				<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/home_icon.png" />
-			    </div>
-			    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_site_home"]; ?></div>
-			</a>
-		    </div>
-			<?php if ($h->currentUser->getPermission('can_access_admin') == 'yes') { ?>
-			    <div  class="admin-menu-item">
-				<a href="<?php echo $h->url(array(), 'admin'); ?>">
-				    <div class="admin-menu-item-icon">
-					<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/admin_icon.png">
-				    </div>
-				    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_admin_home"]; ?></div>
-				</a>
-			    </div>
-			<?php } ?>
-		    <div class="admin-menu-item">
-			<a href="http://bakercms.com/forum/">
-			    <div class="admin-menu-item-icon">
-				<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/forum_icon.png "/>
-			    </div>
-			    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_bakercms_forums"]; ?></div>
-			</a>
-		    </div>
+            <div class="admin-header-title">
+                <img class="admin-header-logo" src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/hotaru-80px.png"/>
+            	<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_Baker CMS"]; ?><?php echo $h->version; ?></div>
+				<div class="admin-header-admin"><a href="<?php echo $h->url(array(), 'admin'); ?>"><?php echo $h->lang["admin_theme_header_admin"]; ?></a></div>
+            </div>
+            
+            <nav id="admin-top-menu" class="nav">
+	            <ul>
+				    <li class="admin-menu-item home">
+					<a href="<?php echo SITEURL; ?>"><?php echo $h->lang["admin_theme_menu_site_home"]; ?></a>
+				    </li>
 
-		    <div class="admin-menu-item">
-			<a href="http://bakercms.com/codex-docs/">
-			    <div class="admin-menu-item-icon">
-				<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/docs_icon.png" />
-			    </div>
-			    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_help"]; ?></div>
-			</a>
-		    </div>
-			<?php if ($h->currentUser->loggedIn) { ?>
-			    <div class="admin-menu-item">
-				<a href="<?php echo $h->url(array('page'=>'admin_logout'), 'admin'); ?>">
-				    <div class="admin-menu-item-icon">
-					<img src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/logout_icon.png" />
-				    </div>
-				    <div class="admin-menu-item-text"><?php echo $h->lang["admin_theme_menu_logout"]; ?></div>
-				</a>
-			    </div>
-			<?php } ?>
-		</div>
+					<?php if ($h->currentUser->getPermission('can_access_admin') == 'yes') { ?>
+					    <li  class="admin-menu-item admin">
+						<a href="<?php echo $h->url(array(), 'admin'); ?>"><?php echo $h->lang["admin_theme_menu_admin_home"]; ?></a>
+					    </li>
+					<?php } ?>
+
+				    <li class="admin-menu-item forum">
+					<a href="http://bakercms.com/forum/"><?php echo $h->lang["admin_theme_menu_bakercms_forums"]; ?></a>
+				    </li>
+
+				    <li class="admin-menu-item codex">
+					<a href="http://bakercms.com/codex-docs/">
+					    <?php echo $h->lang["admin_theme_menu_help"]; ?></a>
+				    </li>
+
+					<?php if ($h->currentUser->loggedIn) { ?>
+					    <li class="admin-menu-item logout">
+						<a href="<?php echo $h->url(array('page'=>'admin_logout'), 'admin'); ?>"><?php echo $h->lang["admin_theme_menu_logout"]; ?></a>
+					    </li>
+					<?php } ?>
+				</ul>
+			</nav>
+
 	    <div class="clear_both">&nbsp;</div>
+
         </div>
     </div>
 
