@@ -557,20 +557,18 @@ nav#admin-top-menu {
   padding: 0em;
 }
 table#settings {
-  width: 96%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 #settings td {
   padding: 1.0em;
-  border: 0.1em solid #ddd;
-  background-color: #f6f6f6;
+  border: 0.1em solid #eaeaea;
+  background-color: #fff;
 }
 #settings_submit {
   float: right;
-  font-size: 1.2em;
-  margin: 0.4em;
-  padding: 0 0.4em 0 0.4em;
+  margin: 20px 0 20px 0;
 }
 /* *************************************
 *  Pagination  *
