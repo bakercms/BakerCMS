@@ -23,12 +23,12 @@ html, body {
   	word-wrap: break-word;	
 	font-size: 0.930em;
 	background: #e7e7e7;
+	color: #555;
 }
 
-.clear			{ clear: both; }
+.clear				{ clear: both; }
 .clearfix:after		{ clear: both; content: "."; display: block; height: 0; line-height: 0; visibility: hidden; }
-html[xmlns] .clearfix	{ display: block; }
-* html .clearfix	{ height: 1%; }
+
 
 /* common classes */
 .aligncenter			{ display: block; margin: 0 auto; }
@@ -36,8 +36,10 @@ html[xmlns] .clearfix	{ display: block; }
 .alignleft				{ float: left; margin: 0 1em 1em 0; }
 .floatleft				{ float: left; }
 .floatright				{ float: right; }
-img.aligncenter, img.alignright,
-img.alignleft				{ border: 3px solid #EEE; }
+
+img.aligncenter, 
+img.alignright, 
+img.alignleft			{ border: 3px solid #EEE; }
 
 .textcenter				{ text-align: center; }
 .textright				{ text-align: right; }
@@ -626,17 +628,16 @@ table#settings {
 		background-color: #76bb37;
 		display:block;
 		text-align: center;
-		color: white;
+		color: #fafafa;
 		font-weight: bold;
 		padding: 10px 0;
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
- 		opacity: 0.8;
-   		transition: opacity 1s ease-in-out;
-        -moz-transition: opacity 1s ease-in-out;
-        -webkit-transition: opacity 1s ease-in-out;		
+   		transition: background 1s ease-in-out;
+        -moz-transition: background 1s ease-in-out;
+        -webkit-transition: background 1s ease-in-out;		
 		&:hover {
-			opacity: 1;
+			background-color: #68a432;
 		}
 	}
 }
@@ -690,6 +691,10 @@ input[type=submit] {
 	color: white;
 	cursor: pointer;
 	border: none;
+	border-radius: 3px;
+   	transition: background 1s ease-in-out;
+    -moz-transition: background 1s ease-in-out;
+    -webkit-transition: background 1s ease-in-out;		
 	&:hover {
 		background: #629632;
 	}

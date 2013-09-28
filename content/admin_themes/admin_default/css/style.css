@@ -29,6 +29,7 @@ body {
   word-wrap: break-word;
   font-size: 0.930em;
   background: #e7e7e7;
+  color: #555;
 }
 .clear {
   clear: both;
@@ -40,12 +41,6 @@ body {
   height: 0;
   line-height: 0;
   visibility: hidden;
-}
-html[xmlns] .clearfix {
-  display: block;
-}
-* html .clearfix {
-  height: 1%;
 }
 /* common classes */
 .aligncenter {
@@ -730,18 +725,17 @@ table#settings {
   background-color: #76bb37;
   display: block;
   text-align: center;
-  color: white;
+  color: #fafafa;
   font-weight: bold;
   padding: 10px 0;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  opacity: 0.8;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
+  transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -webkit-transition: background 1s ease-in-out;
 }
 .admin-news span:hover {
-  opacity: 1;
+  background-color: #68a432;
 }
 /* *************************************
 * Misc CSS             *
@@ -827,6 +821,10 @@ input[type=submit] {
   color: white;
   cursor: pointer;
   border: none;
+  border-radius: 3px;
+  transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -webkit-transition: background 1s ease-in-out;
 }
 input[type=submit]:hover {
   background: #629632;
