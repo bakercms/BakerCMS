@@ -29,11 +29,11 @@
 ?>
 
 
-<div id='content-left'>
+<div id="content-left">
 	 
 <!-- TITLE FOR ADMIN NEWS -->
 	<h2>
-		<a href="http://bakercms.com/feed/"><img src="<?php echo SITEURL; ?>content/admin_themes/<?php echo ADMIN_THEME; ?>images/rss_16.png" alt="rss" /></a>
+		<a href="http://bakercms.com/feed/" title="Subscribe to the <?php echo $h->lang["admin_theme_header_baker_cms"]; ?> RSS Feed!"><span class="icon-rss"></span></a>
 		&nbsp;<?php echo $h->lang["admin_theme_main_latest"]; ?>
 	</h2>
 	
