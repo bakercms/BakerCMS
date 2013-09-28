@@ -95,7 +95,7 @@ class Feeds {
 				$output .= '<div class="admin-news">';
 				
 				// Title
-				$output .= "<h3><a href='".$item->get_permalink()."'>".sanitize($item->get_title(), 'tags')."</a></h3>";
+				$output .= '<h3><a href="' . $item->get_permalink() . '">' . sanitize( $item->get_title(), 'tags' ) . '</a></h3>';
 				
 				if ($item_count < $items_with_content) {
 					// Posted by
@@ -110,7 +110,7 @@ class Feeds {
 					
 					// Content
 					$output .= '<div class="feed-content">';
-					$output .= truncate(sanitize($item->get_content(), 'tags'), $max_chars, TRUE);
+					$output .= truncate( sanitize( $item->get_content(), 'tags' ), $max_chars, TRUE );
 					$output .= '</div>';
 					
 					// Read more
@@ -118,16 +118,16 @@ class Feeds {
 				}
 				
 				$output .= '</div>';
-				if ($item_count < $items_with_content) {
+				if ( $item_count < $items_with_content ) {
 					$output .="<br />";
 				}
 				
-				if ($item_count == ($items_with_content - 1)) {
-					$output .= "<h3>".$lang["admin_news_more_threads"]."</h3>";
+				if ( $item_count == ( $items_with_content - 1 ) ) {
+					$output .= '<h3>' . $lang["admin_news_more_threads"] . '</h3>';
 				}
 
 				$item_count++;
-				if ($item_count >= $max_items) {
+				if ( $item_count >= $max_items ) {
 					break;
 			}
 		}
