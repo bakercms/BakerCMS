@@ -227,7 +227,6 @@ $lang['pagination_previous'] = "Previous";
 $lang['pagination_next'] = "Next";
 
 /* header */
-$lang["admin_theme_header_admin"] = "ADMIN";
 $lang["admin_theme_header_baker_cms"] = "Baker CMS ";
 $lang["admin_theme_menu_admin_home"] = "Admin Home";
 $lang["admin_theme_menu_site_home"] = "Site Home";

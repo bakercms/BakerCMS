@@ -240,38 +240,33 @@ form {
 ************************************** */
 
 header.admin-header {
-   /* background-image:url("../images/content-bg.jpg"); */
-	background-position:0 0;
-	background-repeat:repeat-x;
-	border-bottom:1px solid #C8C8C8;
-	height:87px;
-	position:relative;
+	position:relative;	
 	background-color: #2B697F;
-	border-bottom:1pt solid #666666;
+	border-bottom:1px solid #C8C8C8;
+	height:90px;
 }
 
-div.admin-header-title {
-    color:#333333;
-	float:left;
-	font-size:42px;
-	font-weight:bold;
-	line-height:87px;
-	padding:25px 0 25px 110px;
-	position:relative;
+.admin-header-title {
+	float: left;
+	margin-left: 10px;
+	a {
+		text-decoration:none;
+	}
+	h1 {
+		color: white;
+		font-size: 30px;
+		background: #215567;
+		margin-top:15px;
+		padding: 10px;
+		border-radius: 5px;
+		&:hover {
+			background: #22586b;
+		}
+	}
+
 }
 
-div.admin-header-version {
-    font-family:Verdana;
-	font-size:10px;
-	height:10px;
-	left:166px;
-	line-height:9px;
-	position:absolute;
-	top:66px;
-	width:100px;
-}
-
-nav#admin-top-menu { float:right; width: 650px; margin-top: 30px;}
+nav#admin-top-menu { float:right; width: 650px; margin-top: 35px;}
 
 .nav ul { 
 	float:right;

@@ -50,7 +50,7 @@
 	
 	<ul id="site-stats">
 		<h2><?php echo SITE_NAME . " " . $h->lang["admin_theme_main_stats"]; ?></h2>
-		<li>Baker CMS <?php echo $h->version; ?></li>
+		<li><?php echo $h->lang["admin_theme_header_baker_cms"]; ?> <?php echo $h->version; ?></li>
 		<?php $h->pluginHook('admin_theme_main_stats_post_version'); ?>
 		<?php $h->pluginHook('admin_theme_main_stats', 'users', array('users' => array('all', 'admin', 'supermod', 'moderator', 'member', 'undermod', 'pending', 'banned', 'killspammed'))); ?>
 		<?php $h->pluginHook('admin_theme_main_stats', 'post_manager', array('posts' => array('all', 'approved', 'pending', 'buried', 'archived'))); ?>

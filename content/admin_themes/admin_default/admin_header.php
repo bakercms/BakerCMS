@@ -57,9 +57,7 @@
     <header class="admin-header">
 	<div class="container_12">
             <div class="admin-header-title">
-                <img class="admin-header-logo" src="<?php echo SITEURL; ?>content/admin_themes/admin_default/images/hotaru-80px.png"/>
-            	<div class="admin-header-version"><?php echo $h->lang["admin_theme_header_baker_cms"]; ?><?php echo $h->version; ?></div>
-				<div class="admin-header-admin"><a href="<?php echo $h->url(array(), 'admin'); ?>"><?php echo $h->lang["admin_theme_header_admin"]; ?></a></div>
+                <a href="<?php echo $h->url(array(), 'admin'); ?>"><h1><?php echo $h->lang["admin_theme_header_baker_cms"]; ?></h1></a>
             </div>
             
             <nav id="admin-top-menu" class="nav">
