@@ -25,7 +25,7 @@
  */
 class Hotaru
 {
-	protected $version              = "1.4.2";  // BakerCMS version
+	protected $version              = "1.0.0";  // BakerCMS version
 	protected $isDebug              = false;    // show db queries and page loading time
 	protected $isAdmin              = false;    // flag to tell if we are in Admin or not
 	protected $sidebars             = true;     // enable or disable the sidebars
