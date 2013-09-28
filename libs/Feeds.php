@@ -82,40 +82,42 @@ class Feeds {
 	 * @param int $items_with_content
 	 * @param int $max_chars
 	 */
-	public function adminNews($lang, $max_items = 10, $items_with_content = 3, $max_chars = 300) {
+	public function adminNews( $lang, $max_items = 10, $items_with_content = 3, $max_chars = 300 ) {
 		$feedurl = 'http://bakercms.com/feed/';
-		$feed = $this->newSimplePie($feedurl);
+		$feed = $this->newSimplePie( $feedurl );
 		$feed->init();
 		
-		$output = "";
+		$output = '';
 		$item_count = 0;
 		
 		if ($feed->data) { 
 			foreach ($feed->get_items() as $item) {
-				$output .= "<div class='admin_news'>";
+				$output .= '<div class="admin-news">';
 				
 				// Title
-				$output .= "<a href='".$item->get_permalink()."'>".sanitize($item->get_title(), 'tags')."</a><br />";
+				$output .= "<h3><a href='".$item->get_permalink()."'>".sanitize($item->get_title(), 'tags')."</a></h3>";
 				
 				if ($item_count < $items_with_content) {
 					// Posted by
-					$output .= "<small>".$lang["admin_news_posted_by"]." ";
+					$output .= '<small class="feed-meta">' . $lang["admin_news_posted_by"] . '';
 					
 					foreach ($item->get_authors() as $author) {
 					    $output .= $author->get_name(); 
 					}
 					
 					// Date
-					$output .= " ".$lang["admin_news_on"]." ".$item->get_date('j F Y')."</small><br />";
+					$output .= '' . $lang["admin_news_on"] . '' . $item->get_date( 'j F Y' ) . '</small>';
 					
 					// Content
+					$output .= '<div class="feed-content">';
 					$output .= truncate(sanitize($item->get_content(), 'tags'), $max_chars, TRUE);
+					$output .= '</div>';
 					
 					// Read more
-					$output .= "<small><a href='".$item->get_permalink()."' title='".sanitize($item->get_title(), 'tags')."'>[".$lang["admin_news_read_more"]."]</a></small>";
+					$output .= '<div class="feed-read-div"><a href="' . $item->get_permalink() . '" title="' . sanitize ($item->get_title(), 'tags' ) . '"><span class="feed-read-more">' . $lang["admin_news_read_more"] . '</span></a></div>';
 				}
 				
-				$output .= "</div>";
+				$output .= '</div>';
 				if ($item_count < $items_with_content) {
 					$output .="<br />";
 				}

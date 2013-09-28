@@ -38,7 +38,7 @@
 	</h2>
 	
 	<!-- Feed items, number to show content for, max characters for content -->
-	<?php echo $h->adminNews(10, 3, 300); ?>
+	<?php echo $h->adminNews(3, 3, 160); ?>
 	
 	<br/>
 	 <h2><?php echo $h->lang["admin_theme_main_join_us"]; ?></h2>
