@@ -157,9 +157,9 @@ small {
 }
 #sidebar-right {
   float: right;
-  width: 170px;
+  width: 190px;
   padding: 0 0 20px 10px;
-  border-left: 1px solid #d1d1d1;
+  border-left: 1px solid #e5e5e5;
 }
 #sidebar-right h2 {
   font-size: 18px;
@@ -307,6 +307,9 @@ nav#admin-top-menu {
   float: right;
   width: 650px;
   margin-top: 30px;
+}
+.nav ul {
+  float: right;
 }
 .nav ul li {
   display: inline;
@@ -608,22 +611,19 @@ table#settings {
 *  Sidebar  *
 ******************************* */
 .accordion {
-  width: 227px;
-  border-bottom: solid 1px #c4c4c4;
+  border-bottom: 1px solid #d1d1d1;
 }
 .accordion li {
-  padding: 10px 15px;
+  padding: 15px 15px;
   margin: 0;
   font: bold 16px Arial, Helvetica, sans-serif;
-  border: solid 1px #c4c4c4;
+  border: 1px solid #d1d1d1;
   border-bottom: none;
   cursor: pointer;
+  color: #2B697F;
 }
 .accordion li:hover {
-  background-color: #e3e2e2;
-}
-.accordion li.active {
-  background-position: right 5px;
+  background-color: #efefef;
 }
 .accordion li.account a.account-item {
   position: relative;
@@ -634,46 +634,48 @@ table#settings {
   font-family: 'FontAwesome';
   content: "\f013";
   font-size: 18px;
-  color: #282828;
+  color: #2B697F;
   margin-right: 10px;
 }
 .accordion li.maintenance a:before {
   font-family: 'FontAwesome';
   content: "\f135";
   font-size: 18px;
-  color: #282828;
+  color: #2B697F;
   margin-right: 10px;
 }
 .accordion li.blocked-list a:before {
   font-family: 'FontAwesome';
   content: "\f056";
-  font-size: 18px;
-  color: #282828;
+  font-size: 16px;
+  color: #2B697F;
   margin-right: 10px;
 }
 .accordion li.plugin-management a:before {
   font-family: 'FontAwesome';
   content: "\f08d";
   font-size: 18px;
-  color: #282828;
+  color: #2B697F;
   margin-right: 10px;
 }
 .accordion li.plugin-settings:before {
   font-family: 'FontAwesome';
   content: "\f085";
   font-size: 18px;
-  color: #282828;
+  color: #2B697F;
   margin-right: 10px;
+  position: relative;
 }
 .accordion li.theme-settings:before {
   font-family: 'FontAwesome';
   content: "\f108";
   font-size: 18px;
-  color: #282828;
+  color: #2B697F;
   margin-right: 10px;
 }
 .accordion li a {
   text-decoration: none;
+  color: #2B697F;
 }
 .accordion li ul {
   margin-top: 10px;
@@ -687,7 +689,7 @@ table#settings {
   cursor: pointer;
 }
 .accordion .arrow {
-  background: #ffffff url(../images/arrow-square.gif) no-repeat right -51px;
+  background: #ffffff url(../images/arrow-square.gif) no-repeat right -40px;
 }
 .accordion p {
   background: #f7f7f7;

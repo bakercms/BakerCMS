@@ -124,9 +124,9 @@ small {
 
 #sidebar-right {
 	float: right;
-	width: 170px;
+	width: 190px;
 	padding:  0 0 20px 10px;
-	border-left: 1px solid #d1d1d1;
+	border-left: 1px solid #e5e5e5;
 	h2 {
 		font-size: 18px;
 	}
@@ -168,10 +168,6 @@ small {
 
 }
 
-
-#sidebar ul li a {
-
-}
 
 #sidebar.horizontal { background-color: #f0f0f0; margin-bottom: 0.6em; width:917px; height: 1.9em;}
 #sidebar.horizontal li { padding-left: 1.0em; display: inline; font-size:110%; background: none; padding: 0.3em 1.2em; line-height:1.8em;}
@@ -278,6 +274,7 @@ div.admin-header-version {
 nav#admin-top-menu { float:right; width: 650px; margin-top: 30px;}
 
 .nav ul { 
+	float:right;
 	li { 
 		display: inline;
 		float: left;
@@ -462,20 +459,17 @@ table#settings {
 ******************************* */
 
 .accordion {
-	width: 227px;
-	border-bottom: solid 1px #c4c4c4;
+	border-bottom: 1px solid #d1d1d1;
 	li {	
-		padding: 10px 15px;
+		padding: 15px 15px;
 		margin: 0;
 		font: bold 16px Arial, Helvetica, sans-serif;
-		border: solid 1px #c4c4c4;
+		border: 1px solid #d1d1d1;
 		border-bottom: none;
 		cursor: pointer;
+		color: #2B697F;
 		&:hover {
-			background-color: #e3e2e2;
-		}
-		&.active {
-			background-position: right 5px;
+			background-color: #efefef;
 		}
 		&.account a.account-item {
 			position:relative;
@@ -486,46 +480,48 @@ table#settings {
 			font-family: 'FontAwesome';
 			content: "\f013";
 			font-size: 18px;
-			color: #282828;
+			color: #2B697F;
 			margin-right: 10px;
 		}
 		&.maintenance a:before {
 			font-family: 'FontAwesome';
 			content: "\f135";
 			font-size: 18px;
-			color: #282828;
+			color: #2B697F;
 			margin-right: 10px;
 		}
 		&.blocked-list a:before {
 			font-family: 'FontAwesome';
 			content: "\f056";
-			font-size: 18px;
-			color: #282828;
+			font-size: 16px;
+			color: #2B697F;
 			margin-right: 10px;
 		}
 		&.plugin-management a:before {
 			font-family: 'FontAwesome';
 			content: "\f08d";
 			font-size: 18px;
-			color: #282828;
+			color: #2B697F;
 			margin-right: 10px;
 		}
 		&.plugin-settings:before {
 			font-family: 'FontAwesome';
 			content: "\f085";
 			font-size: 18px;
-			color: #282828;
+			color: #2B697F;
 			margin-right: 10px;
+			position: relative;
 		}	
 		&.theme-settings:before {
 			font-family: 'FontAwesome';
 			content: "\f108";
 			font-size: 18px;
-			color: #282828;
+			color: #2B697F;
 			margin-right: 10px;
 		}													
 		a {
 			text-decoration: none;
+			color: #2B697F;
 		}		
 		ul {
 			margin-top:10px;
@@ -540,7 +536,7 @@ table#settings {
 		}		
 	}
 	.arrow {
-		background: #fff url(../images/arrow-square.gif) no-repeat right -51px;
+		background: #fff url(../images/arrow-square.gif) no-repeat right -40px;
 	}	
 	p {
 		background: #f7f7f7;
