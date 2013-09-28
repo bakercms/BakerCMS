@@ -733,8 +733,8 @@ table#settings {
   color: white;
   font-weight: bold;
   padding: 10px 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   opacity: 0.8;
   transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
