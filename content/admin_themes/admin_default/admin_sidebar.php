@@ -31,24 +31,24 @@
 
 
 <ul id="sidebar" class='accordion <?php echo $h->vars['admin_sidebar_layout']; ?>'>
-	<li>
-<?php
-	     if($h->isActive('avatar')) {
-                    $h->setAvatar($h->currentUser->id, 16);
-					echo $h->linkAvatar();
-                }
-?>
-
-&nbsp;<a href="<?php echo SITEURL; ?>admin_index.php?page=admin_account"><?php echo $h->lang["admin_theme_account"]; ?></a></li>
+	<li class="account">
+		<?php
+		    if($h->isActive('avatar')) {
+	        	$h->setAvatar($h->currentUser->id, 16);
+				echo $h->linkAvatar();
+	        }
+		?>
+        <a href="<?php echo SITEURL; ?>admin_index.php?page=admin_account"><?php echo $h->lang["admin_theme_account"]; ?></a>
+    </li>
 	
-	<li><a href="<?php echo SITEURL; ?>admin_index.php?page=settings"><?php echo $h->lang["admin_theme_settings"]; ?></a></li>
-	<li><a href="<?php echo SITEURL; ?>admin_index.php?page=maintenance"><?php echo $h->lang["admin_theme_maintenance"]; ?></a></li>
-	<li><a href="<?php echo SITEURL; ?>admin_index.php?page=blocked"><?php echo $h->lang["admin_theme_blocked_list"]; ?></a></li>
-	<li><a href="<?php echo SITEURL; ?>admin_index.php?page=plugin_management"><?php echo $h->lang["admin_theme_plugins"]; ?></a></li>
+	<li class="settings"><a href="<?php echo SITEURL; ?>admin_index.php?page=settings"><?php echo $h->lang["admin_theme_settings"]; ?></a></li>
+	<li class="maintenance"><a href="<?php echo SITEURL; ?>admin_index.php?page=maintenance"><?php echo $h->lang["admin_theme_maintenance"]; ?></a></li>
+	<li class="blocked-list"><a href="<?php echo SITEURL; ?>admin_index.php?page=blocked"><?php echo $h->lang["admin_theme_blocked_list"]; ?></a></li>
+	<li class="plugin-management"><a href="<?php echo SITEURL; ?>admin_index.php?page=plugin_management"><?php echo $h->lang["admin_theme_plugins"]; ?></a></li>
 	
 	
 	<?php if ($h->vars['admin_sidebar_layout'] == 'horizontal') { ?>
-		<li><a href="<?php echo SITEURL; ?>admin_index.php?page=plugin_settings"><?php echo $h->lang["admin_theme_plugin_settings"]; ?></a></li>
+		<li class="plugin-settings"><a href="<?php echo SITEURL; ?>admin_index.php?page=plugin_settings"><?php echo $h->lang["admin_theme_plugin_settings"]; ?></a></li>
 	<?php } else { ?>
 		<li><?php echo $h->lang["admin_theme_plugin_settings"]; ?>
 		<ul id="plugin_settings_list">
@@ -65,7 +65,7 @@
 	<?php } ?>
 	
 	<?php if ($h->vars['admin_sidebar_layout'] != 'horizontal') { ?>
-		<li><?php echo $h->lang["admin_theme_theme_settings"]; ?>
+		<li class="theme-settings"><?php echo $h->lang["admin_theme_theme_settings"]; ?>
 			<ul id="plugin_settings_list">
 			<?php 
 				$themes = $h->getFiles(THEMES, array('404error.php'));

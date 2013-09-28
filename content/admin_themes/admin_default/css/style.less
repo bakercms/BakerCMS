@@ -2,6 +2,16 @@
  *	ADMIN DEFAULT THEME CSS         *
  ************************************** */
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
 /* globals */
 html, body { 
     font-family: sans-serif; /* 1 */
@@ -80,8 +90,21 @@ small {
 	padding: 1.2em;
 }
 
+#inner-wrapper {
+	.grid_9 {
+		background: white;
+		border: 1px solid #d1d1d1;
+	}
+	.grid_12 {
+		background: white;
+		border: 1px solid #d1d1d1;
+	}	
+}
+
+
 #sidebar {
 	padding: 0;
+	background: white;
 	ul {
 		li {
 			padding-left: 1.0em;
@@ -102,8 +125,12 @@ small {
 #sidebar-right {
 	float: right;
 	width: 170px;
-	padding-left: 20px;
-	border-left: 1px solid #282828;
+	padding:  0 0 20px 20px;
+	border-left: 1px solid #d1d1d1;
+	h2{
+		font-size: 18px;
+
+	}
 }
 
 #sidebar ul li a {
@@ -174,16 +201,6 @@ form {
 }
 
 .widget {height: 32px; vertical-align:middle; cursor: pointer;}
-
-#inner-wrapper {
-	.grid_9 {
-		background: white;
-	}
-	.grid_12 {
-		background: white;
-	}	
-}
-
 
 
 /* *************************************
@@ -411,46 +428,43 @@ table#settings {
 .accordion {
 	width: 227px;
 	border-bottom: solid 1px #c4c4c4;
-}
-.accordion li {	
-	padding: 8px 15px;
-	margin: 0;
-	font: bold 16px Arial, Helvetica, sans-serif;
-	border: solid 1px #c4c4c4;
-	border-bottom: none;
-	cursor: pointer;
-}
-.accordion .arrow {
-	background: #fff url(../images/arrow-square.gif) no-repeat right -51px;
+	li {	
+		padding: 8px 15px;
+		margin: 0;
+		font: bold 16px Arial, Helvetica, sans-serif;
+		border: solid 1px #c4c4c4;
+		border-bottom: none;
+		cursor: pointer;
+		&:hover {
+			background-color: #e3e2e2;
+		}
+		&.active {
+			background-position: right 5px;
+		}
+		ul {
+			margin-top:10px;
+			li {
+				background: #fff none;
+				padding: 5px 12px;
+				margin: 0;
+				font: normal 80%/100% Arial, Helvetica, sans-serif;
+				border: none;
+				cursor: pointer;
+			}			
+		}		
+	}
+	.arrow {
+		background: #fff url(../images/arrow-square.gif) no-repeat right -51px;
+	}	
+	p {
+		background: #f7f7f7;
+		margin: 0;
+		padding: 10px 15px 20px;
+		border-left: solid 1px #c4c4c4;
+		border-right: solid 1px #c4c4c4;
+	}
 }
 
-.accordion li:hover {
-	background-color: #e3e2e2;
-}
-.accordion li.active {
-	background-position: right 5px;
-}
-
-.accordion li ul li {
-	background: #fff none;
-	padding: 5px 12px;
-	margin: 0;
-	font: normal 80%/100% Arial, Helvetica, sans-serif;
-	border: none;
-	cursor: pointer;
-}
-
-.accordion li ul {
-	margin-top:10px;
-}
-
-.accordion p {
-	background: #f7f7f7;
-	margin: 0;
-	padding: 10px 15px 20px;
-	border-left: solid 1px #c4c4c4;
-	border-right: solid 1px #c4c4c4;
-}
 
 .accordion .horizontal { }
 

@@ -1,6 +1,15 @@
 /* **************************************
  *	ADMIN DEFAULT THEME CSS         *
  ************************************** */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
 /* globals */
 html,
 body {
@@ -123,8 +132,17 @@ small {
 #main {
   padding: 1.2em;
 }
+#inner-wrapper .grid_9 {
+  background: white;
+  border: 1px solid #d1d1d1;
+}
+#inner-wrapper .grid_12 {
+  background: white;
+  border: 1px solid #d1d1d1;
+}
 #sidebar {
   padding: 0;
+  background: white;
 }
 #sidebar ul li {
   padding-left: 1.0em;
@@ -140,8 +158,11 @@ small {
 #sidebar-right {
   float: right;
   width: 170px;
-  padding-left: 20px;
-  border-left: 1px solid #282828;
+  padding: 0 0 20px 20px;
+  border-left: 1px solid #d1d1d1;
+}
+#sidebar-right h2 {
+  font-size: 18px;
 }
 #sidebar.horizontal {
   background-color: #f0f0f0;
@@ -215,12 +236,6 @@ form {
   height: 32px;
   vertical-align: middle;
   cursor: pointer;
-}
-#inner-wrapper .grid_9 {
-  background: white;
-}
-#inner-wrapper .grid_12 {
-  background: white;
 }
 /* *************************************
 *  Admin Header page *
@@ -571,14 +586,14 @@ table#settings {
   border-bottom: none;
   cursor: pointer;
 }
-.accordion .arrow {
-  background: #ffffff url(../images/arrow-square.gif) no-repeat right -51px;
-}
 .accordion li:hover {
   background-color: #e3e2e2;
 }
 .accordion li.active {
   background-position: right 5px;
+}
+.accordion li ul {
+  margin-top: 10px;
 }
 .accordion li ul li {
   background: #fff none;
@@ -588,8 +603,8 @@ table#settings {
   border: none;
   cursor: pointer;
 }
-.accordion li ul {
-  margin-top: 10px;
+.accordion .arrow {
+  background: #ffffff url(../images/arrow-square.gif) no-repeat right -51px;
 }
 .accordion p {
   background: #f7f7f7;
