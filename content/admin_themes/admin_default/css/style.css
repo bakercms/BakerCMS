@@ -592,6 +592,56 @@ table#settings {
 .accordion li.active {
   background-position: right 5px;
 }
+.accordion li.account a.account-item {
+  position: relative;
+  top: 2px;
+  left: 8px;
+}
+.accordion li.settings a:before {
+  font-family: 'FontAwesome';
+  content: "\f013";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li.maintenance a:before {
+  font-family: 'FontAwesome';
+  content: "\f135";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li.blocked-list a:before {
+  font-family: 'FontAwesome';
+  content: "\f056";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li.plugin-management a:before {
+  font-family: 'FontAwesome';
+  content: "\f08d";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li.plugin-settings:before {
+  font-family: 'FontAwesome';
+  content: "\f085";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li.theme-settings:before {
+  font-family: 'FontAwesome';
+  content: "\f108";
+  font-size: 18px;
+  color: #282828;
+  margin-right: 10px;
+}
+.accordion li a {
+  text-decoration: none;
+}
 .accordion li ul {
   margin-top: 10px;
 }

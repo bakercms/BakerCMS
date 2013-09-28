@@ -38,7 +38,7 @@
 				echo $h->linkAvatar();
 	        }
 		?>
-        <a href="<?php echo SITEURL; ?>admin_index.php?page=admin_account"><?php echo $h->lang["admin_theme_account"]; ?></a>
+        <a class="account-item" href="<?php echo SITEURL; ?>admin_index.php?page=admin_account"><?php echo $h->lang["admin_theme_account"]; ?></a>
     </li>
 	
 	<li class="settings"><a href="<?php echo SITEURL; ?>admin_index.php?page=settings"><?php echo $h->lang["admin_theme_settings"]; ?></a></li>
@@ -50,7 +50,7 @@
 	<?php if ($h->vars['admin_sidebar_layout'] == 'horizontal') { ?>
 		<li class="plugin-settings"><a href="<?php echo SITEURL; ?>admin_index.php?page=plugin_settings"><?php echo $h->lang["admin_theme_plugin_settings"]; ?></a></li>
 	<?php } else { ?>
-		<li><?php echo $h->lang["admin_theme_plugin_settings"]; ?>
+		<li class="plugin-settings"><?php echo $h->lang["admin_theme_plugin_settings"]; ?>
 		<ul id="plugin_settings_list">
 			<?php 
 				$sb_links = $h->pluginHook('admin_sidebar_plugin_settings');
