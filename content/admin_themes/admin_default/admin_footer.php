@@ -27,7 +27,18 @@
  */
 
 ?>
-
+	<div id="footer" role="contentinfo" class="grid_12">
+		<?php
+			$h->pluginHook('admin_footer');
+			
+			// Link to forums...
+			echo '<p>' . $h->lang["admin_theme_footer_having_trouble_vist_forums"] . '</p>';
+			
+			if ($h->isDebug) {
+				$h->showQueriesAndTime();
+			}
+		?>
+	</div>
 
 </div>
 

@@ -193,16 +193,12 @@ small {
 
 
 #sidebar.horizontal { 
-	background-color: #f0f0f0; 
-	margin-bottom: 0.6em; 
-	width:917px; 
-	height: 1.9em;
+	
 }
 
 #sidebar.horizontal li { 
 	padding-left: 1.0em; 
 	display: inline;
-	font-size:110%; 
 	background: none; 
 	padding: 0.3em 1.2em; 
 	line-height:1.8em;
@@ -212,7 +208,7 @@ small {
 	padding-top:0.6em;
 }
 
-#ft {
+#footer {
 	height: auto;
 	padding: 1.0em 0 1.0em 0;
 	text-align: center;
@@ -246,7 +242,8 @@ form {
 	padding: 0.8em;
 	text-align: center;
 	font-size: 1.2em;
-	font-weight: bold;
+	font-weight: bold;	
+	border-radius: 5px;
 }
 
 #return_message {
@@ -258,7 +255,8 @@ form {
 }
 
 .green {
-	background-color: #99FF66 !important;
+	background-color: #629632 !important;
+	color: white;
 }
 
 .yellow {
@@ -625,4 +623,38 @@ table#settings {
 #plugin_search_form #admin_plugin_search {padding:4px; font-size:24px;}
 #plugin_search_form #admin_plugin_search_button {padding:4px; font-weight:bold; color:#777; background-color:#ccc;}
 #plugin_search_form #admin_plugin_search_button:hover {color:navy; cursor:pointer;}
+
+#plugin_settings {
+	margin-top: 30px;
+	padding-bottom: 20px;
+	h1, h2 {
+		background: #fafafa;
+		border: 1px solid #e5e5e5;
+		padding: 10px;
+	}
+	p {
+		
+	}
+	input[type=submit] {
+		float: right;
+		
+	}
+}
+
+input[type=submit] {
+	padding: 0.5em 1em;
+	background: #2B697F;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+	border: none;
+	&:hover {
+		background: #629632;
+	}
+}
+
+textarea {
+	width:100%;
+}
 
