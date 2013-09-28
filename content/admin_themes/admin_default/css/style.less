@@ -383,6 +383,12 @@ nav#admin-top-menu {
 *  Blocked list, Sidebar Widgets and similar tables *
 *************************************************** */
 
+table { 
+	padding: 0; 
+	margin: 0 ; 
+	width: 100% !important;
+}
+
 #table_list { margin-top: 1.0em; }
 #table_list table { margin: auto; width: 96%; }
 #table_list tr.table_a td, #table_list tr.table_b td { font-size: 1.2em; font-weight: bold; padding: 0.4em 0.5em 0.4em 0.5em; text-align: left; }
@@ -643,6 +649,21 @@ table#settings {
 * Form CSS             *
 ************************************** */
 
+form {
+	table {
+		background: #fafafa;
+		border: 1px solid #e5e5e5;
+		tbody {
+			tr {
+				td {
+					padding: 5px 5px 0px 5px;
+					
+				}		
+			}
+		}	
+	}
+}
+
 /*General rules*/
 form input {
     line-height:18px;
@@ -650,7 +671,7 @@ form input {
 /*Text, email & tel input fields*/
 form input[type=text],
 form input[type=password] {
-    width: auto;
+    width: 200px;
     margin-bottom:8px;
     padding:5px 5px;
     -webkit-border-radius: 5px;
@@ -729,12 +750,13 @@ textarea {
 #plugin_search_form #admin_plugin_search_button:hover {color:navy; cursor:pointer;}
 
 #plugin_settings {
-	margin-top: 30px;
-	padding-bottom: 20px;
+	margin-top: 10px;
+	padding: 20px;
 	h1, h2 {
 		background: #fafafa;
 		border: 1px solid #e5e5e5;
 		padding: 10px;
+		margin-bottom: 20px;
 	}
 	p {
 		
