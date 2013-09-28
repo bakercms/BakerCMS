@@ -167,13 +167,13 @@ small {
 }
 #content-left h2 span.icon-rss {
   background: orange;
-  padding: 0.3em 0.43em 0.2em;
+  padding: 0.1em 0.3em 0.1em;
   border-radius: 0.2em;
 }
 #content-left h2 span.icon-rss:before {
   font-family: 'FontAwesome';
   content: "\f09e";
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 #sidebar-right {
