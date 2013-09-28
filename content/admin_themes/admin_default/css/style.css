@@ -207,6 +207,12 @@ small {
 #sidebar-right #site-stats li:nth-child(3) {
   display: none;
 }
+#sidebar-right #site-stats li:nth-child(14) {
+  display: none;
+}
+#sidebar-right #site-stats li:nth-child(21) {
+  display: none;
+}
 #sidebar-right #site-stats li.title {
   background: #2B697F;
   padding: 10px;
