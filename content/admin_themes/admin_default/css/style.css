@@ -153,16 +153,49 @@ small {
 #content-left {
   width: 450px;
   float: left;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 #sidebar-right {
   float: right;
   width: 170px;
-  padding: 0 0 20px 20px;
+  padding: 0 0 20px 10px;
   border-left: 1px solid #d1d1d1;
 }
 #sidebar-right h2 {
   font-size: 18px;
+}
+#sidebar-right #site-stats {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+#sidebar-right #site-stats h2 {
+  background: #2B697F;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+#sidebar-right #site-stats li {
+  background: #fafafa;
+  display: block;
+  padding: 10px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0;
+  font-size: 14px;
+}
+#sidebar-right #site-stats li:nth-child(3) {
+  display: none;
+}
+#sidebar-right #site-stats li.title {
+  background: #2B697F;
+  padding: 10px;
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+}
+#sidebar-right #site-stats li a {
+  color: #2B697F;
+  font-size: 14px;
 }
 #sidebar.horizontal {
   background-color: #f0f0f0;
@@ -579,7 +612,7 @@ table#settings {
   border-bottom: solid 1px #c4c4c4;
 }
 .accordion li {
-  padding: 8px 15px;
+  padding: 10px 15px;
   margin: 0;
   font: bold 16px Arial, Helvetica, sans-serif;
   border: solid 1px #c4c4c4;
@@ -662,6 +695,12 @@ table#settings {
   padding: 10px 15px 20px;
   border-left: solid 1px #c4c4c4;
   border-right: solid 1px #c4c4c4;
+}
+#sidebar.horizontal {
+  margin-top: 20px;
+}
+#sidebar.horizontal li a {
+  font-size: 12px;
 }
 #admin_theme_theme_activate {
   cursor: pointer;

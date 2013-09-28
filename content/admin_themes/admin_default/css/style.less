@@ -119,19 +119,55 @@ small {
 #content-left { 
 	width: 450px; 
 	float: left; 
-	margin-right: 20px; 
+	margin-right: 10px; 
 }
 
 #sidebar-right {
 	float: right;
 	width: 170px;
-	padding:  0 0 20px 20px;
+	padding:  0 0 20px 10px;
 	border-left: 1px solid #d1d1d1;
-	h2{
+	h2 {
 		font-size: 18px;
+	}
+
+	#site-stats {
+		border-left: 1px solid #e5e5e5;
+		border-right: 1px solid #e5e5e5;
+		h2 {
+			background: #2B697F;
+			padding: 10px;
+			color: white;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		li {
+			background: #fafafa;
+			display: block;
+			padding: 10px 10px;
+			border-bottom: 1px solid #e5e5e5;				
+			margin: 0;
+			font-size: 14px;
+			&:nth-child(3) {
+				display: none;
+			}				
+			&.title {
+				background: #2B697F;
+				padding: 10px;
+				color: white;
+				font-weight: normal;
+				font-size: 16px;
+			}
+			a {
+				color: #2B697F;
+				font-size: 14px;
+			}
+		}
 
 	}
+
 }
+
 
 #sidebar ul li a {
 
@@ -429,7 +465,7 @@ table#settings {
 	width: 227px;
 	border-bottom: solid 1px #c4c4c4;
 	li {	
-		padding: 8px 15px;
+		padding: 10px 15px;
 		margin: 0;
 		font: bold 16px Arial, Helvetica, sans-serif;
 		border: solid 1px #c4c4c4;
@@ -514,6 +550,18 @@ table#settings {
 		border-right: solid 1px #c4c4c4;
 	}
 }
+
+#sidebar {
+	&.horizontal{
+		margin-top:20px;
+		li {
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
 
 #admin_theme_theme_activate {cursor: pointer; margin-top: 10px; }
 #admin_theme_theme_activate span.activate { background-color: #fbe760; padding: 0.4em; }

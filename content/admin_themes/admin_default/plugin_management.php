@@ -62,8 +62,8 @@
 
 <?php
 	$the_plugins = $h->vars['installed_plugins'];
-	$per_column = count($the_plugins)/3;
-	for($i=0; $i<3; $i++) { 
+	$per_column = count($the_plugins)/2;
+	for($i=0; $i<2; $i++) { 
 ?>
 
 
