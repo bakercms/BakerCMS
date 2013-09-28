@@ -35,19 +35,19 @@ class Feeds {
 	 * @param array $items - $items[0] = array('title'=>TITLE, 'link'=>URL, 'date'=>TIMESTAMP, 'description'=>DESCRIPTION)
 	 * @param string $content_type e.g. 'application/xml' or 'text/plain'
 	 */
-	public function rss($h, $title = '', $link = '', $description = '', $items = array(), $content_type = 'application/xml') {
-		require_once(EXTENSIONS.'RSSWriterClass/rsswriter.php');
+	public function rss( $h, $title = '', $link = '', $description = '', $items = array(), $content_type = 'application/xml' ) {
+		require_once( EXTENSIONS.'RSSWriterClass/rsswriter.php' );
 		
-		$feed = new RSS($h->url(array('page'=>'rss')));
-		$feed->title = stripslashes(html_entity_decode(urldecode($title), ENT_QUOTES, 'UTF-8'));
-		$feed->link = html_entity_decode($link, ENT_QUOTES, 'UTF-8');
+		$feed = new RSS( $h->url( array( 'page'=>'rss' ) ) );
+		$feed->title = stripslashes( html_entity_decode( urldecode( $title ), ENT_QUOTES, 'UTF-8') );
+		$feed->link = html_entity_decode( $link, ENT_QUOTES, 'UTF-8' );
 		$feed->description = $description;
 		
-		if ($items) {
-			$feed->addItem($items);
+		if ( $items ) {
+			$feed->addItem( $items );
 		}
 				
-		echo $feed->out($content_type);
+		echo $feed->out( $content_type );
 	}
 
 				
@@ -60,15 +60,15 @@ class Feeds {
 	 *
 	 * @return object|false $sp
 	 */
-	public function newSimplePie($feed='', $cache=RSS_CACHE, $cache_duration=RSS_CACHE_DURATION) {
-		include_once(EXTENSIONS."SimplePie/simplepie.inc");
+	public function newSimplePie( $feed='', $cache=RSS_CACHE, $cache_duration=RSS_CACHE_DURATION ) {
+		include_once( EXTENSIONS . "SimplePie/simplepie.inc" );
 		
-		if ($feed != '') {
+		if ( $feed != '' ) {
 			$sp = new SimplePie();
-			$sp->set_feed_url($feed);
-			$sp->set_cache_location(CACHE."rss_cache/");
-			$sp->set_cache_duration($cache_duration);
-			$sp->enable_cache(($cache === 'true'));
+			$sp->set_feed_url( $feed );
+			$sp->set_cache_location( CACHE . "rss_cache/" );
+			$sp->set_cache_duration( $cache_duration );
+			$sp->enable_cache( ( $cache === 'true' ) );
 			$sp->handle_content_type();
 			return $sp;
 		}
