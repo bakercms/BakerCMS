@@ -99,14 +99,14 @@ class Feeds {
 				
 				if ($item_count < $items_with_content) {
 					// Posted by
-					$output .= '<small class="feed-meta">' . $lang["admin_news_posted_by"] . '';
+					$output .= '<small class="feed-meta">' . $lang["admin_news_posted_by"] . '&nbsp;';
 					
 					foreach ($item->get_authors() as $author) {
 					    $output .= $author->get_name(); 
 					}
 					
 					// Date
-					$output .= '' . $lang["admin_news_on"] . '' . $item->get_date( 'j F Y' ) . '</small>';
+					$output .= '&nbsp;' . $lang["admin_news_on"] . '' . $item->get_date( 'j F Y' ) . '</small>';
 					
 					// Content
 					$output .= '<div class="feed-content">';
