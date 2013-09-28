@@ -31,7 +31,7 @@ html[xmlns] .clearfix	{ display: block; }
 * html .clearfix	{ height: 1%; }
 
 /* common classes */
-.aligncenter				{ display: block; margin: 0 auto; }
+.aligncenter			{ display: block; margin: 0 auto; }
 .alignright				{ float: right; margin: 0 0 1em 1em; }
 .alignleft				{ float: left; margin: 0 1em 1em 0; }
 .floatleft				{ float: left; }
@@ -169,9 +169,25 @@ small {
 }
 
 
-#sidebar.horizontal { background-color: #f0f0f0; margin-bottom: 0.6em; width:917px; height: 1.9em;}
-#sidebar.horizontal li { padding-left: 1.0em; display: inline; font-size:110%; background: none; padding: 0.3em 1.2em; line-height:1.8em;}
-#sidebar.horizontal li a {padding-top:0.6em;}
+#sidebar.horizontal { 
+	background-color: #f0f0f0; 
+	margin-bottom: 0.6em; 
+	width:917px; 
+	height: 1.9em;
+}
+
+#sidebar.horizontal li { 
+	padding-left: 1.0em; 
+	display: inline;
+	font-size:110%; 
+	background: none; 
+	padding: 0.3em 1.2em; 
+	line-height:1.8em;
+}
+
+#sidebar.horizontal li a {
+	padding-top:0.6em;
+}
 
 #ft {
 	height: auto;
@@ -210,9 +226,13 @@ form {
 	font-weight: bold;
 }
 
-#return_message {display:none;}
+#return_message {
+	display:none;
+}
 
-.visible {display:block !important;}
+.visible {
+	display:block !important;
+}
 
 .green {
 	background-color: #99FF66 !important;
@@ -232,7 +252,11 @@ form {
 	font-weight: bold;
 }
 
-.widget {height: 32px; vertical-align:middle; cursor: pointer;}
+.widget {
+	height: 32px; 
+	vertical-align:middle; 
+	cursor: pointer;
+}
 
 
 /* *************************************
@@ -266,7 +290,11 @@ header.admin-header {
 
 }
 
-nav#admin-top-menu { float:right; width: 650px; margin-top: 35px;}
+nav#admin-top-menu { 
+	float:right; 
+	width: 650px;
+	margin-top: 35px;
+}
 
 .nav ul { 
 	float:right;
@@ -316,25 +344,6 @@ nav#admin-top-menu { float:right; width: 650px; margin-top: 35px;}
 		}		
 	}	
 }
-
-img.admin-header-logo {height:70px;
-	left:30px;
-	position:absolute;
-	top:15px;
-	width:70px;
-}
-
-div.admin-header-admin {
-	left:148px;
-	position:absolute;
-	top:0px;
-	width:90px;
-}
-
-div.admin-frame {margin: 0 auto; width:75em;}
-
-div.admin-header-admin a { font-size: 26px; color:#000;}
-div.admin-header-admin a:hover {color:#333; text-decoration: none;}
 
 /* *************************************
 *  Admin Home page *
@@ -553,6 +562,28 @@ table#settings {
 	}
 }
 
+/* *************************************
+*  News Feed Widget CSS             *
+************************************** */
+
+.admin_news {
+	background: #fafafa;
+	border: 1px solid #e5e5e5;
+	padding: 10px;
+	a {
+		font-size: 18px;
+	}
+	small { 
+		margin-top: 10px;
+		display: block;
+	}
+}
+
+
+/* *************************************
+* Misc CSS             *
+************************************** */
+
 
 #admin_theme_theme_activate {cursor: pointer; margin-top: 10px; }
 #admin_theme_theme_activate span.activate { background-color: #fbe760; padding: 0.4em; }
@@ -560,32 +591,11 @@ table#settings {
 .tick_on {padding-left: 1.5em; background-image: url(../images/tick_yes.png); background-repeat: no-repeat;}
 .warning_on {padding-left: 1.5em; background-image: url(../images/warning.png); background-repeat: no-repeat;}
 
-#sidebar.vertical .home {padding-left: 1.5em; background-image: url(../images/home.png); background-repeat: no-repeat;}
-
-#site_stats li a {color: #000;}
-#site-stats .title {font-weight:bold; margin-left:0; margin-bottom:2px; }
-#site-stats li {margin-left:4px;}
 
 #admin_topright {margin: 20px; width: 160px;}
 
 #settings a {color:#000;}
 #settings a:hover {color:blue;}
-
-/*
-
-This breaks the layout in IE:
-
-#login_form {-moz-border-radius:14px; background:none repeat scroll 0 0 #D4F07F; margin:30px auto; padding:20px; text-align:center; width:500px; -moz-box-shadow:0 4px 18px #C8C8C8; }
-#login_form input {-moz-border-radius:4px; border: 1pt solid #d0d0d0;}
-#login_form #admin_login_button {padding:4px; font-weight:bold; color:#777; background-color:#ccc;}
-#login_form #admin_login_button:hover {color:navy; cursor:pointer;}
-#login_form #admin_login_name {padding:4px; font-size:24px;}
-#login_form #admin_login_password {padding:4px; font-size:24px;}
-#login_form .forgot_password {color:#777;}
-#login_form .forgot_password:hover {text-decoration:none; color:navy;}
-
-#login_form td {font:14px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;}
-*/
 
 #plugin_search_form {-moz-border-radius:14px; background:none repeat scroll 0 0 #eee640; margin:30px auto; padding:20px; text-align:center; width:500px; -moz-box-shadow:0 4px 18px #C8C8C8; }
 #plugin_search_form input {-moz-border-radius:4px; border: 1pt solid #d0d0d0;}

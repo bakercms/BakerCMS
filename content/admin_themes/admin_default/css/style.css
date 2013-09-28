@@ -350,31 +350,6 @@ nav#admin-top-menu {
   color: white;
   font-size: 16px;
 }
-img.admin-header-logo {
-  height: 70px;
-  left: 30px;
-  position: absolute;
-  top: 15px;
-  width: 70px;
-}
-div.admin-header-admin {
-  left: 148px;
-  position: absolute;
-  top: 0px;
-  width: 90px;
-}
-div.admin-frame {
-  margin: 0 auto;
-  width: 75em;
-}
-div.admin-header-admin a {
-  font-size: 26px;
-  color: #000;
-}
-div.admin-header-admin a:hover {
-  color: #333;
-  text-decoration: none;
-}
 /* *************************************
 *  Admin Home page *
 ************************************** */
@@ -698,6 +673,24 @@ table#settings {
 #sidebar.horizontal li a {
   font-size: 12px;
 }
+/* *************************************
+*  News Feed Widget CSS             *
+************************************** */
+.admin_news {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+}
+.admin_news a {
+  font-size: 18px;
+}
+.admin_news small {
+  margin-top: 10px;
+  display: block;
+}
+/* *************************************
+* Misc CSS             *
+************************************** */
 #admin_theme_theme_activate {
   cursor: pointer;
   margin-top: 10px;
@@ -721,22 +714,6 @@ table#settings {
   background-image: url(../images/warning.png);
   background-repeat: no-repeat;
 }
-#sidebar.vertical .home {
-  padding-left: 1.5em;
-  background-image: url(../images/home.png);
-  background-repeat: no-repeat;
-}
-#site_stats li a {
-  color: #000;
-}
-#site-stats .title {
-  font-weight: bold;
-  margin-left: 0;
-  margin-bottom: 2px;
-}
-#site-stats li {
-  margin-left: 4px;
-}
 #admin_topright {
   margin: 20px;
   width: 160px;
@@ -747,21 +724,6 @@ table#settings {
 #settings a:hover {
   color: blue;
 }
-/*
-
-This breaks the layout in IE:
-
-#login_form {-moz-border-radius:14px; background:none repeat scroll 0 0 #D4F07F; margin:30px auto; padding:20px; text-align:center; width:500px; -moz-box-shadow:0 4px 18px #C8C8C8; }
-#login_form input {-moz-border-radius:4px; border: 1pt solid #d0d0d0;}
-#login_form #admin_login_button {padding:4px; font-weight:bold; color:#777; background-color:#ccc;}
-#login_form #admin_login_button:hover {color:navy; cursor:pointer;}
-#login_form #admin_login_name {padding:4px; font-size:24px;}
-#login_form #admin_login_password {padding:4px; font-size:24px;}
-#login_form .forgot_password {color:#777;}
-#login_form .forgot_password:hover {text-decoration:none; color:navy;}
-
-#login_form td {font:14px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;}
-*/
 #plugin_search_form {
   -moz-border-radius: 14px;
   background: none repeat scroll 0 0 #eee640;
